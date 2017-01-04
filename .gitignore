@@ -1,3 +1,6 @@
 db/
 output_files/
 *.bak
+incremental_db/
+simulation/
+.qsys_edit/
