@@ -1,0 +1,112 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2016  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 0 0 312 168)
+	(text "PLL" (rect 145 0 172 16)(font "Arial" (font_size 10)))
+	(text "inst" (rect 8 152 25 164)(font "Arial" ))
+	(port
+		(pt 0 64)
+		(input)
+		(text "inclk0" (rect 0 0 31 14)(font "Arial" (font_size 8)))
+		(text "inclk0" (rect 4 50 29 63)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 72 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "scanclk" (rect 0 0 43 14)(font "Arial" (font_size 8)))
+		(text "scanclk" (rect 4 66 39 79)(font "Arial" (font_size 8)))
+		(line (pt 0 80)(pt 72 80))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "scandata" (rect 0 0 53 14)(font "Arial" (font_size 8)))
+		(text "scandata" (rect 4 82 47 95)(font "Arial" (font_size 8)))
+		(line (pt 0 96)(pt 72 96))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "scanclkena" (rect 0 0 64 14)(font "Arial" (font_size 8)))
+		(text "scanclkena" (rect 4 98 57 111)(font "Arial" (font_size 8)))
+		(line (pt 0 112)(pt 72 112))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "configupdate" (rect 0 0 74 14)(font "Arial" (font_size 8)))
+		(text "configupdate" (rect 4 114 65 127)(font "Arial" (font_size 8)))
+		(line (pt 0 128)(pt 72 128))
+	)
+	(port
+		(pt 312 64)
+		(output)
+		(text "c0" (rect 0 0 14 14)(font "Arial" (font_size 8)))
+		(text "c0" (rect 296 50 306 63)(font "Arial" (font_size 8)))
+	)
+	(port
+		(pt 312 80)
+		(output)
+		(text "scandataout" (rect 0 0 70 14)(font "Arial" (font_size 8)))
+		(text "scandataout" (rect 248 66 306 79)(font "Arial" (font_size 8)))
+	)
+	(port
+		(pt 312 96)
+		(output)
+		(text "scandone" (rect 0 0 56 14)(font "Arial" (font_size 8)))
+		(text "scandone" (rect 260 82 306 95)(font "Arial" (font_size 8)))
+	)
+	(drawing
+		(text "MAX 10" (rect 274 153 577 317)(font "Arial" ))
+		(text "inclk0 frequency: 10.000 MHz" (rect 82 76 287 163)(font "Arial" ))
+		(text "Operation Mode: Normal" (rect 82 89 263 189)(font "Arial" ))
+		(text "Clk " (rect 83 110 180 231)(font "Arial" ))
+		(text "Ratio" (rect 104 110 228 231)(font "Arial" ))
+		(text "Ph (dg)" (rect 130 110 289 231)(font "Arial" ))
+		(text "DC (%)" (rect 164 110 358 231)(font "Arial" ))
+		(text "c0" (rect 86 124 180 259)(font "Arial" ))
+		(text "10/1" (rect 106 124 227 259)(font "Arial" ))
+		(text "0.00" (rect 136 124 288 259)(font "Arial" ))
+		(text "50.00" (rect 168 124 357 259)(font "Arial" ))
+		(line (pt 0 0)(pt 313 0))
+		(line (pt 313 0)(pt 313 170))
+		(line (pt 0 170)(pt 313 170))
+		(line (pt 0 0)(pt 0 170))
+		(line (pt 80 108)(pt 196 108))
+		(line (pt 80 121)(pt 196 121))
+		(line (pt 80 135)(pt 196 135))
+		(line (pt 80 108)(pt 80 135))
+		(line (pt 101 108)(pt 101 135)(line_width 3))
+		(line (pt 127 108)(pt 127 135)(line_width 3))
+		(line (pt 161 108)(pt 161 135)(line_width 3))
+		(line (pt 195 108)(pt 195 135))
+		(line (pt 72 48)(pt 239 48))
+		(line (pt 239 48)(pt 239 152))
+		(line (pt 72 152)(pt 239 152))
+		(line (pt 72 48)(pt 72 152))
+		(line (pt 311 64)(pt 239 64))
+		(line (pt 311 80)(pt 239 80))
+		(line (pt 311 96)(pt 239 96))
+	)
+)

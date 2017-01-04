@@ -1,0 +1,101 @@
+Restore Archived Project report for LogicAnalyzer
+Wed Jan 04 13:49:10 2017
+Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Restore Archived Project Summary
+  3. Restore Archived Project Messages
+  4. Files Restored
+  5. Files Not Restored
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2016  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; Restore Archived Project Summary                                        ;
++---------------------------------+---------------------------------------+
+; Restore Archived Project Status ; Successful - Wed Jan 04 13:49:10 2017 ;
+; Revision Name                   ; LogicAnalyzer                         ;
+; Top-level Entity Name           ; LogicAnalyzer                         ;
+; Family                          ; MAX 10                                ;
++---------------------------------+---------------------------------------+
+
+
++-----------------------------------+
+; Restore Archived Project Messages ;
++-----------------------------------+
+Info: Successfully restored 'D:/Dropbox/Dropbox/Sem7/PRUS/projekty/LogicAnalyzer/LogicAnalyzer_tmp_archive.qar' into the 'D:/Dropbox/Dropbox/Sem7/PRUS/projekty_git/Logic_Analyzer_MAX10_FPGA' directory
+Info: Generated report 'LogicAnalyzer.restore.rpt'
+
+
++-------------------------------------------------------------+
+; Files Restored                                              ;
++-------------------------------------------------------------+
+; File Name                                                   ;
++-------------------------------------------------------------+
+; qar_info.json                                               ;
+; Controller.v                                                ;
+; FIFO/FIFO.bsf                                               ;
+; FIFO/FIFO.qip                                               ;
+; FIFO/FIFO.v                                                 ;
+; FIFO/FIFO_bb.v                                              ;
+; IP/PLL.bsf                                                  ;
+; IP/PLL.mif                                                  ;
+; IP/PLL.ppf                                                  ;
+; IP/PLL.qip                                                  ;
+; IP/PLL.v                                                    ;
+; IP/PLL_bb.v                                                 ;
+; LogicAnalyzer.bdf                                           ;
+; LogicAnalyzer.qpf                                           ;
+; LogicAnalyzer.qsf                                           ;
+; PLL.bsf                                                     ;
+; TriggerBlock.bsf                                            ;
+; TriggerBlock.v                                              ;
+; UART/UART.cmp                                               ;
+; UART/UART.qsys                                              ;
+; UART/UART.sopcinfo                                          ;
+; UART/synthesis/UART.debuginfo                               ;
+; UART/synthesis/UART.qip                                     ;
+; UART/synthesis/UART.v                                       ;
+; UART/synthesis/submodules/UART_rs232_0.v                    ;
+; UART/synthesis/submodules/altera_up_rs232_counters.v        ;
+; UART/synthesis/submodules/altera_up_rs232_in_deserializer.v ;
+; UART/synthesis/submodules/altera_up_rs232_out_serializer.v  ;
+; UART/synthesis/submodules/altera_up_sync_fifo.v             ;
+; output_files/LogicAnalyzer.flow.rpt                         ;
+; output_files/LogicAnalyzer.map.rpt                          ;
+; output_files/LogicAnalyzer.map.summary                      ;
+; assignment_defaults.qdf                                     ;
++-------------------------------------------------------------+
+
+
++--------------------+
+; Files Not Restored ;
++--------------------+
+; File Name          ;
++--------------------+
+
+
