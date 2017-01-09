@@ -66,18 +66,7 @@ agreement for further details.
 		(text "dataOut[2..0]" (rect 145 43 195 55)(font "Arial" ))
 		(line (pt 216 48)(pt 200 48)(line_width 3))
 	)
-	(parameter
-		"triggerBlockOn"
-		"0"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"triggerBlockOff"
-		"1"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
 	(drawing
 		(rectangle (rect 16 16 200 96)(line_width 1))
 	)
-	(annotation_block (parameter)(rect 232 -64 332 16))
 )

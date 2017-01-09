@@ -29,46 +29,36 @@ module TriggerBlock (
 	reg [2:0] differenceReg;
 	reg [2:0] triggerMaskReg;
 	
-	parameter triggerBlockOn = 0, triggerBlockOff = 1;
-	
-	reg triggerBlockState;
 	
 	assign dataOut = newDataReg;
 	
 	always @( posedge clk_PLL)
 	begin
-		if ( triggerBlockState == triggerBlockOn)
+		if ( triggerOut == 1'b0)
 			begin
 				prevDataReg = newDataReg;
 				newDataReg = dataIn;
 				differenceReg = prevDataReg^newDataReg;
 				triggerOut = |(differenceReg&triggerMask);
 			end
-		else if ( triggerBlockState == triggerBlockOff)
-			begin
-				newDataReg = dataIn;
-				triggerOut = 0;
-			end
 		else
 			begin
 				newDataReg = dataIn;
-				triggerOut = 0;
 			end
-		if(triggerOut == 1)
-			triggerBlockState <= triggerBlockOff;
+		
+		if( reset == 1'b1 )
+			begin
+				triggerOut = 1'b0;
+			end
 		
 	end
 	
 
-	always @( posedge reset)
-	begin
-			triggerBlockState <= triggerBlockOn;
-	end
-	
+
 	
 	always @(triggerMask)
 	begin
-		triggerMaskReg = triggerMask;
+		triggerMaskReg <= triggerMask;
 	end
 	
 	endmodule
