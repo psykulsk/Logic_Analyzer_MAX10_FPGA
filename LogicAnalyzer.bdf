@@ -116,6 +116,38 @@ agreement for further details.
 		(line (pt 78 12)(pt 82 8))
 	)
 )
+(pin
+	(output)
+	(rect 544 56 722 72)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "pll_output_debug" (rect 90 0 172 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(pin
+	(output)
+	(rect 1096 72 1274 88)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "clk_div16_debug" (rect 90 0 172 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
 (symbol
 	(rect 1160 232 1360 440)
 	(text "uart" (rect 5 0 23 12)(font "Arial" ))
@@ -213,56 +245,6 @@ agreement for further details.
 	)
 	(drawing
 		(rectangle (rect 16 16 184 192))
-	)
-)
-(symbol
-	(rect 176 448 392 560)
-	(text "TriggerBlock" (rect 5 0 65 12)(font "Arial" ))
-	(text "TriggerBlock_inst" (rect 8 96 91 108)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "dataIn[2..0]" (rect 0 0 56 12)(font "Arial" ))
-		(text "dataIn[2..0]" (rect 21 27 77 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32)(line_width 3))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "triggerMask[2..0]" (rect 0 0 82 12)(font "Arial" ))
-		(text "triggerMask[2..0]" (rect 21 43 103 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48)(line_width 3))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "clk_PLL" (rect 0 0 38 12)(font "Arial" ))
-		(text "clk_PLL" (rect 21 59 59 71)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "reset" (rect 0 0 24 12)(font "Arial" ))
-		(text "reset" (rect 21 75 45 87)(font "Arial" ))
-		(line (pt 0 80)(pt 16 80))
-	)
-	(port
-		(pt 216 32)
-		(output)
-		(text "triggerOut" (rect 0 0 48 12)(font "Arial" ))
-		(text "triggerOut" (rect 155 27 203 39)(font "Arial" ))
-		(line (pt 216 32)(pt 200 32))
-	)
-	(port
-		(pt 216 48)
-		(output)
-		(text "dataOut[2..0]" (rect 0 0 64 12)(font "Arial" ))
-		(text "dataOut[2..0]" (rect 141 43 205 55)(font "Arial" ))
-		(line (pt 216 48)(pt 200 48)(line_width 3))
-	)
-	(drawing
-		(rectangle (rect 16 16 200 96))
 	)
 )
 (symbol
@@ -508,6 +490,56 @@ agreement for further details.
 		(rectangle (rect 16 16 144 64))
 	)
 )
+(symbol
+	(rect 176 448 392 560)
+	(text "TriggerBlock" (rect 5 0 65 12)(font "Arial" ))
+	(text "TriggerBlock_inst" (rect 8 96 91 108)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "dataIn[2..0]" (rect 0 0 56 12)(font "Arial" ))
+		(text "dataIn[2..0]" (rect 21 27 77 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "triggerMask[2..0]" (rect 0 0 82 12)(font "Arial" ))
+		(text "triggerMask[2..0]" (rect 21 43 103 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "clk_PLL" (rect 0 0 38 12)(font "Arial" ))
+		(text "clk_PLL" (rect 21 59 59 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "reset" (rect 0 0 24 12)(font "Arial" ))
+		(text "reset" (rect 21 75 45 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 216 32)
+		(output)
+		(text "triggerOut" (rect 0 0 48 12)(font "Arial" ))
+		(text "triggerOut" (rect 155 27 195 39)(font "Arial" ))
+		(line (pt 216 32)(pt 200 32))
+	)
+	(port
+		(pt 216 48)
+		(output)
+		(text "dataOut[2..0]" (rect 0 0 64 12)(font "Arial" ))
+		(text "dataOut[2..0]" (rect 141 43 195 55)(font "Arial" ))
+		(line (pt 216 48)(pt 200 48)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 200 96))
+	)
+)
 (connector
 	(pt 128 424)
 	(pt 128 512)
@@ -565,22 +597,6 @@ agreement for further details.
 	(pt 872 328)
 	(pt 872 424)
 	(bus)
-)
-(connector
-	(pt 152 528)
-	(pt 152 584)
-)
-(connector
-	(pt 784 584)
-	(pt 152 584)
-)
-(connector
-	(pt 784 696)
-	(pt 784 584)
-)
-(connector
-	(pt 784 696)
-	(pt 1152 696)
 )
 (connector
 	(pt 1152 696)
@@ -674,10 +690,6 @@ agreement for further details.
 )
 (connector
 	(pt 800 328)
-	(pt 800 528)
-)
-(connector
-	(pt 816 528)
 	(pt 800 528)
 )
 (connector
@@ -812,16 +824,8 @@ agreement for further details.
 	(pt 456 200)
 )
 (connector
-	(pt 456 200)
-	(pt 456 264)
-)
-(connector
 	(pt 456 264)
 	(pt 456 328)
-)
-(connector
-	(pt 1032 200)
-	(pt 1144 200)
 )
 (connector
 	(pt 1144 200)
@@ -853,10 +857,6 @@ agreement for further details.
 	(pt 680 616)
 )
 (connector
-	(pt 16 616)
-	(pt 680 616)
-)
-(connector
 	(pt 1152 312)
 	(pt 1152 136)
 	(bus)
@@ -876,6 +876,62 @@ agreement for further details.
 	(pt 1440 136)
 	(bus)
 )
+(connector
+	(pt 152 528)
+	(pt 152 696)
+)
+(connector
+	(pt 152 696)
+	(pt 1152 696)
+)
+(connector
+	(pt 456 64)
+	(pt 544 64)
+)
+(connector
+	(pt 456 64)
+	(pt 456 200)
+)
+(connector
+	(pt 456 200)
+	(pt 456 264)
+)
+(connector
+	(pt 16 616)
+	(pt 680 616)
+)
+(connector
+	(pt 1096 80)
+	(pt 1064 80)
+)
+(connector
+	(pt 1064 80)
+	(pt 1064 200)
+)
+(connector
+	(pt 1032 200)
+	(pt 1064 200)
+)
+(connector
+	(pt 1064 200)
+	(pt 1144 200)
+)
+(connector
+	(pt 744 528)
+	(pt 800 528)
+)
+(connector
+	(pt 800 528)
+	(pt 816 528)
+)
+(connector
+	(pt 744 664)
+	(pt 744 528)
+)
+(connector
+	(pt 744 664)
+	(pt 1400 664)
+)
 (junction (pt 456 360))
 (junction (pt 16 480))
 (junction (pt 456 328))
@@ -884,3 +940,6 @@ agreement for further details.
 (junction (pt 456 264))
 (junction (pt 816 480))
 (junction (pt 1152 312))
+(junction (pt 456 200))
+(junction (pt 1064 200))
+(junction (pt 800 528))

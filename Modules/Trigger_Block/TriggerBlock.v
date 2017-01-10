@@ -32,7 +32,7 @@ module TriggerBlock (
 	
 	assign dataOut = newDataReg;
 	
-	always @( posedge clk_PLL)
+	always @( posedge clk_PLL )
 	begin
 		if ( triggerOut == 1'b0)
 			begin
