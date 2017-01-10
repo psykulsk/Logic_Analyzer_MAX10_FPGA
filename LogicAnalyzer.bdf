@@ -447,6 +447,35 @@ agreement for further details.
 		(rectangle (rect 16 16 248 160))
 	)
 )
+(symbol
+	(rect 872 168 1032 248)
+	(text "CLK_Div_16" (rect 5 0 67 12)(font "Arial" ))
+	(text "inst4" (rect 8 64 30 81)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk_in" (rect 0 0 28 12)(font "Arial" ))
+		(text "clk_in" (rect 21 27 49 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "reset" (rect 0 0 24 12)(font "Arial" ))
+		(text "reset" (rect 21 43 45 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 160 32)
+		(output)
+		(text "clk_div16" (rect 0 0 47 12)(font "Arial" ))
+		(text "clk_div16" (rect 100 27 147 39)(font "Arial" ))
+		(line (pt 160 32)(pt 144 32))
+	)
+	(drawing
+		(rectangle (rect 16 16 144 64))
+	)
+)
 (connector
 	(pt 128 424)
 	(pt 128 512)
@@ -585,10 +614,6 @@ agreement for further details.
 	(pt 456 328)
 )
 (connector
-	(pt 456 264)
-	(pt 456 328)
-)
-(connector
 	(pt 128 424)
 	(pt 456 424)
 )
@@ -611,10 +636,6 @@ agreement for further details.
 (connector
 	(pt 456 360)
 	(pt 456 424)
-)
-(connector
-	(pt 456 424)
-	(pt 456 536)
 )
 (connector
 	(pt 776 480)
@@ -739,8 +760,71 @@ agreement for further details.
 	(pt 1104 296)
 	(pt 1160 296)
 )
+(connector
+	(pt 1160 344)
+	(pt 1128 344)
+)
+(connector
+	(pt 1128 416)
+	(pt 1128 344)
+)
+(connector
+	(pt 1128 416)
+	(pt 808 416)
+)
+(connector
+	(pt 808 416)
+	(pt 808 448)
+)
+(connector
+	(pt 808 448)
+	(pt 456 448)
+)
+(connector
+	(pt 456 424)
+	(pt 456 448)
+)
+(connector
+	(pt 456 448)
+	(pt 456 536)
+)
+(connector
+	(pt 872 200)
+	(pt 456 200)
+)
+(connector
+	(pt 456 200)
+	(pt 456 264)
+)
+(connector
+	(pt 456 264)
+	(pt 456 328)
+)
+(connector
+	(pt 1032 200)
+	(pt 1144 200)
+)
+(connector
+	(pt 1144 200)
+	(pt 1144 280)
+)
+(connector
+	(pt 1144 280)
+	(pt 1160 280)
+)
+(connector
+	(pt 872 216)
+	(pt 816 216)
+)
+(connector
+	(pt 816 216)
+	(pt 816 480)
+)
 (junction (pt 456 360))
 (junction (pt 16 480))
 (junction (pt 24 264))
 (junction (pt 456 328))
 (junction (pt 456 424))
+(junction (pt 456 448))
+(junction (pt 456 264))
+(junction (pt 816 480))
