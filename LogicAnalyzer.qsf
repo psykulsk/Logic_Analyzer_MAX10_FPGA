@@ -117,11 +117,10 @@ set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda
 # ------------------------
 set_global_assignment -name NUM_PARALLEL_PROCESSORS 1
 set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
-set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH FIFO_to_UART_Controller_tb -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH LogicAnalyzer_tb -section_id eda_simulation
 set_global_assignment -name EDA_TEST_BENCH_NAME FIFO_to_UART_Controller_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id FIFO_to_UART_Controller_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME FIFO_to_UART_Controller_tb -section_id FIFO_to_UART_Controller_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE Modules/FIFO_to_UART_Controller/FIFO_to_UART_Controller_tb.v -section_id FIFO_to_UART_Controller_tb
 set_global_assignment -name VERILOG_FILE Modules/Bit_Padder/Bit_Padder.v
 set_global_assignment -name VERILOG_FILE Modules/Trigger_Block/TriggerBlock.v
 set_global_assignment -name VERILOG_FILE Modules/Pulse_Generator/PulseGenerator.v
@@ -136,6 +135,13 @@ set_global_assignment -name VERILOG_FILE Modules/Controller/Controller.v
 set_global_assignment -name VERILOG_FILE Modules/UART_ASIC_world/UART.v
 set_global_assignment -name BDF_FILE LogicAnalyzer.bdf
 set_global_assignment -name VERILOG_FILE Modules/CLK_Div_16/CLK_Div_16.v
+set_global_assignment -name VERILOG_FILE LogicAnalyzer_tb.v
+set_global_assignment -name EDA_TEST_BENCH_FILE Modules/FIFO_to_UART_Controller/FIFO_to_UART_Controller_tb.v -section_id FIFO_to_UART_Controller_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME LogicAnalyzer_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id LogicAnalyzer_tb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "10 us" -section_id LogicAnalyzer_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME LogicAnalyzer_tb -section_id LogicAnalyzer_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE LogicAnalyzer_tb.v -section_id LogicAnalyzer_tb
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
