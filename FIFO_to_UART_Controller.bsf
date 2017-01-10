@@ -1,0 +1,121 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2016  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 16 16 280 192)
+	(text "FIFO_to_UART_Controller" (rect 5 0 118 12)(font "Arial" ))
+	(text "inst" (rect 8 160 20 172)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "rst" (rect 0 0 10 12)(font "Arial" ))
+		(text "rst" (rect 21 27 31 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 1))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "clk" (rect 0 0 10 12)(font "Arial" ))
+		(text "clk" (rect 21 43 31 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 1))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "FIFO_wrfull" (rect 0 0 47 12)(font "Arial" ))
+		(text "FIFO_wrfull" (rect 21 59 68 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 1))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "FIFO_rdempty" (rect 0 0 61 12)(font "Arial" ))
+		(text "FIFO_rdempty" (rect 21 75 82 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 1))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "UART_txempty" (rect 0 0 68 12)(font "Arial" ))
+		(text "UART_txempty" (rect 21 91 89 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 1))
+	)
+	(port
+		(pt 264 32)
+		(output)
+		(text "FIFO_rdreq" (rect 0 0 48 12)(font "Arial" ))
+		(text "FIFO_rdreq" (rect 195 27 243 39)(font "Arial" ))
+		(line (pt 264 32)(pt 248 32)(line_width 1))
+	)
+	(port
+		(pt 264 48)
+		(output)
+		(text "UART_rst" (rect 0 0 46 12)(font "Arial" ))
+		(text "UART_rst" (rect 197 43 243 55)(font "Arial" ))
+		(line (pt 264 48)(pt 248 48)(line_width 1))
+	)
+	(port
+		(pt 264 64)
+		(output)
+		(text "UART_ld_tx_data" (rect 0 0 76 12)(font "Arial" ))
+		(text "UART_ld_tx_data" (rect 167 59 243 71)(font "Arial" ))
+		(line (pt 264 64)(pt 248 64)(line_width 1))
+	)
+	(port
+		(pt 264 80)
+		(output)
+		(text "UART_tx_enable" (rect 0 0 73 12)(font "Arial" ))
+		(text "UART_tx_enable" (rect 170 75 243 87)(font "Arial" ))
+		(line (pt 264 80)(pt 248 80)(line_width 1))
+	)
+	(port
+		(pt 264 96)
+		(output)
+		(text "triggerBlock_Syncrst" (rect 0 0 83 12)(font "Arial" ))
+		(text "triggerBlock_Syncrst" (rect 160 91 243 103)(font "Arial" ))
+		(line (pt 264 96)(pt 248 96)(line_width 1))
+	)
+	(port
+		(pt 264 112)
+		(output)
+		(text "triggerBlock_Mask[2..0]" (rect 0 0 94 12)(font "Arial" ))
+		(text "triggerBlock_Mask[2..0]" (rect 149 107 243 119)(font "Arial" ))
+		(line (pt 264 112)(pt 248 112)(line_width 3))
+	)
+	(port
+		(pt 264 128)
+		(output)
+		(text "Bit_Padder_Sel[1..0]" (rect 0 0 80 12)(font "Arial" ))
+		(text "Bit_Padder_Sel[1..0]" (rect 163 123 243 135)(font "Arial" ))
+		(line (pt 264 128)(pt 248 128)(line_width 3))
+	)
+	(port
+		(pt 264 144)
+		(output)
+		(text "state_debug[4..0]" (rect 0 0 69 12)(font "Arial" ))
+		(text "state_debug[4..0]" (rect 174 139 243 151)(font "Arial" ))
+		(line (pt 264 144)(pt 248 144)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 248 160)(line_width 1))
+	)
+)
