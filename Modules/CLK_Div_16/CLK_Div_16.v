@@ -13,8 +13,8 @@ reg [3:0] counter;
 always @(posedge clk_in or posedge reset)
 begin
 	if(reset == 1'b1)
-		counter = 0;
-	counter = counter+ 1;
+		counter = 3'b0;
+	counter = counter + 3'b1;
 	clk_div16 = counter[3];
 end
 

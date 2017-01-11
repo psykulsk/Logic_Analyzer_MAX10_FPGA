@@ -118,36 +118,36 @@ end
 // UART TX Logic
 always @ (posedge txclk or posedge reset)
 if (reset) begin
-  tx_reg        <= 0;
-  tx_empty      <= 1;
-  tx_over_run   <= 0;
-  tx_out        <= 1;
-  tx_cnt        <= 0;
+  tx_reg        <= 8'b0;
+  tx_empty      <= 1'b1;
+  tx_over_run   <= 1'b0;
+  tx_out        <= 1'b1;
+  tx_cnt        <= 4'b0;
 end else begin
    if (ld_tx_data) begin
       if (!tx_empty) begin
-        tx_over_run <= 0;
+        tx_over_run <= 1'b0;
       end else begin
         tx_reg   <= tx_data;
-        tx_empty <= 0;
+        tx_empty <= 1'b0;
       end
    end
    if (tx_enable && !tx_empty) begin
-     tx_cnt <= tx_cnt + 1;
-     if (tx_cnt == 0) begin
-       tx_out <= 0;
+     tx_cnt <= tx_cnt + 4'b1;
+     if (tx_cnt == 4'b0) begin
+       tx_out <= 1'b0;
      end
-     if (tx_cnt > 0 && tx_cnt < 9) begin
-        tx_out <= tx_reg[tx_cnt -1];
+     if (tx_cnt > 4'b0 && tx_cnt < 4'b1001) begin
+        tx_out <= tx_reg[tx_cnt - 4'b1];
      end
-     if (tx_cnt == 9) begin
-       tx_out <= 1;
-       tx_cnt <= 0;
-       tx_empty <= 1;
+     if (tx_cnt == 4'b1001) begin
+       tx_out <= 1'b1;
+       tx_cnt <= 4'b0;
+       tx_empty <= 1'b1;
      end
    end
    if (!tx_enable) begin
-     tx_cnt <= 0;
+     tx_cnt <= 1'b0;
    end
 end
 

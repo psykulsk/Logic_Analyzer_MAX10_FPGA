@@ -42,7 +42,7 @@ output wire [4:0] state_debug;
 
 //Lokalne stałe
 localparam [4:0] INITIAL				= 5'b00000;
-localparam [4:0] IDLE 					= 5'b00001;
+localparam [4:0] IDLE 					= 5'b01101;
 localparam [4:0] SET_READ_REQUEST 		= 5'b00010;
 localparam [4:0] WAIT_TX_EMPTY 			= 5'b00011;
 localparam [4:0] LOAD_DATA_TO_UART 		= 5'b00100;
@@ -55,7 +55,7 @@ reg counter;
 reg [4:0] state;
 reg [4:0] next_state;
 
-assign state_debug = state;
+assign state_debug = !state;
 	
 //Przypisanie nowego stanu co takt zegara
 always @ (posedge clk)	begin
