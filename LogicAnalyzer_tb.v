@@ -12,7 +12,7 @@ reg rst_sig;
 wire TxD_sig;
 wire [4:0] state_debug_sig;
 wire [7:0] dataOut_debug_sig;
-wire clk_div16_debug_sig;
+wire clk_div16_debug;
 wire pll_output_debug_sig;
 
 // Unit under test instance (UUT)
@@ -23,8 +23,7 @@ LogicAnalyzer LogicAnalyzer_inst
 	.dataIn(dataIn_sig) ,	// input [2:0] dataIn_sig
 	.TxD(TxD_sig) ,	// output  TxD_sig
 	.pll_output_debug(pll_output_debug_sig) ,	// output  pll_output_debug_sig
-	.clk_div16_debug(clk_div16_debug_sig) ,	// output  clk_div16_debug_sig
-	.dataOut_debug(dataOut_debug_sig) ,	// output [7:0] dataOut_debug_sig
+	.clk_div16_debug(clk_div16_debug) ,	// output  clk_div16_debug_sig
 	.state_debug(state_debug_sig) 	// output [4:0] state_debug_sig
 );
 

@@ -22,7 +22,9 @@ module LogicAnalyzer(
 	rst,
 	dataIn,
 	TxD,
-	state_debug
+	state_debug,
+	pll_output_debug_sig,
+	clk_div16_debug
 	
 );
 
@@ -32,6 +34,9 @@ input wire	rst;
 input wire	[2:0] dataIn;
 output wire	TxD;
 output wire [4:0] state_debug;
+output wire pll_output_debug_sig;
+output wire clk_div16_debug;
+
 
 wire	PLL_output;
 wire	FIFO_rdreq;
@@ -51,7 +56,8 @@ wire	UART_tx_enable;
 wire	[7:0] UART_data_in;
 
 
-
+assign clk_div16_debug = clk_div16;
+assign pll_output_debug_sig = PLL_output;
 
 FIFO_smaller	FIFO_smaller_inst(
 	.rdclk(PLL_output),
@@ -91,7 +97,7 @@ FIFO_to_UART_Controller	FIFO_to_UART_Controller_inst(
 	.triggerBlock_Mask(triggerBlock_Mask));
 
 
-	PLL_div16	PLL_div16_inst (
+	PLL_115k	PLL_115k_inst (
 	.inclk0 ( PLL_output ),
 	.c0 ( clk_div16 )
 	);

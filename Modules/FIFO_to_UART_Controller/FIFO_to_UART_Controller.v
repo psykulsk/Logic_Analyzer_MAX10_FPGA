@@ -55,7 +55,7 @@ reg counter;
 reg [4:0] state;
 reg [4:0] next_state;
 
-assign state_debug = !state;
+assign state_debug = state;
 	
 //Przypisanie nowego stanu co takt zegara
 always @ (posedge clk)	begin
