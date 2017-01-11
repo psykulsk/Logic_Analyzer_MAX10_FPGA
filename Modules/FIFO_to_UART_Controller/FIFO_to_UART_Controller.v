@@ -44,11 +44,11 @@ output wire [4:0] state_debug;
 localparam [4:0] INITIAL				= 5'b00000;
 localparam [4:0] IDLE 					= 5'b00001;
 localparam [4:0] SET_READ_REQUEST 		= 5'b00010;
-localparam [4:0] WAIT_TX_EMPTY 			= 5'b00100;
-localparam [4:0] LOAD_DATA_TO_UART 		= 5'b01000;
-localparam [4:0] FINALIZE_DATA_CYCLE 	= 5'b10000;
-localparam [4:0] SEND_NEW_LINE_CHAR 	= 5'b10001;
-localparam [4:0] WAIT_FOR_NEW_LINE_CHAR_SEND 	= 5'b10010;
+localparam [4:0] WAIT_TX_EMPTY 			= 5'b00011;
+localparam [4:0] LOAD_DATA_TO_UART 		= 5'b00100;
+localparam [4:0] FINALIZE_DATA_CYCLE 	= 5'b00101;
+localparam [4:0] SEND_NEW_LINE_CHAR 	= 5'b00110;
+localparam [4:0] WAIT_FOR_NEW_LINE_CHAR_SEND 	= 5'b00111;
 
 //Lokalne zmienne
 reg counter;	
