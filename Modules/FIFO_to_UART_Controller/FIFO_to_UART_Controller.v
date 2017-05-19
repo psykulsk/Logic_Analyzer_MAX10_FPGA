@@ -36,7 +36,7 @@ output reg UART_tx_enable;	//enables tx_tansmission.
 output reg UART_ld_tx_data;
 
 output reg triggerBlock_Syncrst;	//Triger Block has to be rst after each full read from FIFO
-output wire [2:0]triggerBlock_Mask;			//Masks which inputs trigger the TriggerBlock
+output reg [2:0]triggerBlock_Mask = 3'b111;			//Masks which inputs trigger the TriggerBlock
 
 output reg [1:0] Bit_Padder_Sel; //Used to select what type of data is pushed into UART
 											// 00 => Pipe (pads 3 bit sream with 5 zero bits)
@@ -73,7 +73,6 @@ always @ (posedge clk)	begin
 			state <= next_state;				
 end
 
-assign triggerBlock_Mask = 3'b111;
 	
 //Logika obliczania następnego stanu
 always @ * begin
