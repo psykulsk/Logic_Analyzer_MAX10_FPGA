@@ -22,7 +22,7 @@ agreement for further details.
 (header "graphic" (version "1.4"))
 (pin
 	(input)
-	(rect -152 256 24 272)
+	(rect -152 224 24 240)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
 	(text "inclk0_10MHz" (rect 9 0 76 12)(font "Arial" ))
 	(pt 176 8)
@@ -69,42 +69,26 @@ agreement for further details.
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
 )
 (pin
+	(input)
+	(rect 1160 496 1328 512)
+	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
+	(text "RxD" (rect 5 0 27 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+)
+(pin
 	(output)
-	(rect 1424 256 1600 272)
+	(rect 1464 256 1640 272)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "TxD" (rect 90 0 110 12)(font "Arial" ))
-	(pt 0 8)
-	(drawing
-		(line (pt 0 8)(pt 52 8))
-		(line (pt 52 4)(pt 78 4))
-		(line (pt 52 12)(pt 78 12))
-		(line (pt 52 12)(pt 52 4))
-		(line (pt 78 4)(pt 82 8))
-		(line (pt 82 8)(pt 78 12))
-		(line (pt 78 12)(pt 82 8))
-	)
-)
-(pin
-	(output)
-	(rect 1400 584 1582 600)
-	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "state_debug[4..0]" (rect 90 0 176 12)(font "Arial" ))
-	(pt 0 8)
-	(drawing
-		(line (pt 0 8)(pt 52 8))
-		(line (pt 52 4)(pt 78 4))
-		(line (pt 52 12)(pt 78 12))
-		(line (pt 52 12)(pt 52 4))
-		(line (pt 78 4)(pt 82 8))
-		(line (pt 82 8)(pt 78 12))
-		(line (pt 78 12)(pt 82 8))
-	)
-)
-(pin
-	(output)
-	(rect 1440 128 1636 144)
-	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "dataOut_debug[7..0]" (rect 90 0 190 12)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -148,8 +132,40 @@ agreement for further details.
 		(line (pt 78 12)(pt 82 8))
 	)
 )
+(pin
+	(output)
+	(rect 1464 304 1642 320)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "rx_empty_debug" (rect 90 0 172 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(pin
+	(output)
+	(rect 1456 600 1638 616)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "state_debug[4..0]" (rect 90 0 176 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
 (symbol
-	(rect 1160 232 1360 440)
+	(rect 1200 232 1400 440)
 	(text "uart" (rect 5 0 23 12)(font "Arial" ))
 	(text "uart_inst" (rect 8 192 50 204)(font "Arial" ))
 	(port
@@ -248,28 +264,6 @@ agreement for further details.
 	)
 )
 (symbol
-	(rect 176 232 312 312)
-	(text "PLL_LogicAnalyzer" (rect 5 0 98 12)(font "Arial" ))
-	(text "inst1" (rect 8 64 31 76)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "inclk0" (rect 0 0 28 12)(font "Arial" ))
-		(text "inclk0" (rect 21 27 49 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 136 32)
-		(output)
-		(text "c0" (rect 0 0 11 12)(font "Arial" ))
-		(text "c0" (rect 106 27 117 39)(font "Arial" ))
-		(line (pt 136 32)(pt 120 32))
-	)
-	(drawing
-		(rectangle (rect 16 16 120 64))
-	)
-)
-(symbol
 	(rect 616 280 792 424)
 	(text "FIFO_smaller" (rect 5 0 72 12)(font "Arial" ))
 	(text "inst" (rect 8 128 25 140)(font "Arial" ))
@@ -363,105 +357,6 @@ agreement for further details.
 	)
 )
 (symbol
-	(rect 816 448 1080 624)
-	(text "FIFO_to_UART_Controller" (rect 5 0 134 12)(font "Arial" ))
-	(text "inst3" (rect 8 160 30 177)(font "Intel Clear" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "rst" (rect 0 0 12 12)(font "Arial" ))
-		(text "rst" (rect 21 27 33 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "clk" (rect 0 0 14 12)(font "Arial" ))
-		(text "clk" (rect 21 43 35 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "FIFO_wrfull" (rect 0 0 57 12)(font "Arial" ))
-		(text "FIFO_wrfull" (rect 21 59 78 71)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "FIFO_rdempty" (rect 0 0 73 12)(font "Arial" ))
-		(text "FIFO_rdempty" (rect 21 75 94 87)(font "Arial" ))
-		(line (pt 0 80)(pt 16 80))
-	)
-	(port
-		(pt 0 96)
-		(input)
-		(text "UART_txempty" (rect 0 0 76 12)(font "Arial" ))
-		(text "UART_txempty" (rect 21 91 97 103)(font "Arial" ))
-		(line (pt 0 96)(pt 16 96))
-	)
-	(port
-		(pt 264 32)
-		(output)
-		(text "FIFO_rdreq" (rect 0 0 56 12)(font "Arial" ))
-		(text "FIFO_rdreq" (rect 196 27 252 39)(font "Arial" ))
-		(line (pt 264 32)(pt 248 32))
-	)
-	(port
-		(pt 264 48)
-		(output)
-		(text "UART_rst" (rect 0 0 48 12)(font "Arial" ))
-		(text "UART_rst" (rect 203 43 251 55)(font "Arial" ))
-		(line (pt 264 48)(pt 248 48))
-	)
-	(port
-		(pt 264 64)
-		(output)
-		(text "UART_ld_tx_data" (rect 0 0 86 12)(font "Arial" ))
-		(text "UART_ld_tx_data" (rect 171 59 257 71)(font "Arial" ))
-		(line (pt 264 64)(pt 248 64))
-	)
-	(port
-		(pt 264 80)
-		(output)
-		(text "UART_tx_enable" (rect 0 0 82 12)(font "Arial" ))
-		(text "UART_tx_enable" (rect 174 75 256 87)(font "Arial" ))
-		(line (pt 264 80)(pt 248 80))
-	)
-	(port
-		(pt 264 96)
-		(output)
-		(text "triggerBlock_Syncrst" (rect 0 0 102 12)(font "Arial" ))
-		(text "triggerBlock_Syncrst" (rect 157 91 259 103)(font "Arial" ))
-		(line (pt 264 96)(pt 248 96))
-	)
-	(port
-		(pt 264 112)
-		(output)
-		(text "triggerBlock_Mask[2..0]" (rect 0 0 115 12)(font "Arial" ))
-		(text "triggerBlock_Mask[2..0]" (rect 146 107 261 119)(font "Arial" ))
-		(line (pt 264 112)(pt 248 112)(line_width 3))
-	)
-	(port
-		(pt 264 128)
-		(output)
-		(text "Bit_Padder_Sel[1..0]" (rect 0 0 100 12)(font "Arial" ))
-		(text "Bit_Padder_Sel[1..0]" (rect 159 123 259 135)(font "Arial" ))
-		(line (pt 264 128)(pt 248 128)(line_width 3))
-	)
-	(port
-		(pt 264 144)
-		(output)
-		(text "state_debug[4..0]" (rect 0 0 86 12)(font "Arial" ))
-		(text "state_debug[4..0]" (rect 171 139 257 151)(font "Arial" ))
-		(line (pt 264 144)(pt 248 144)(line_width 3))
-	)
-	(drawing
-		(rectangle (rect 16 16 248 160))
-	)
-)
-(symbol
 	(rect 872 168 1032 248)
 	(text "CLK_Div_16" (rect 5 0 67 12)(font "Arial" ))
 	(text "inst4" (rect 8 64 30 81)(font "Intel Clear" ))
@@ -526,18 +421,212 @@ agreement for further details.
 		(pt 216 32)
 		(output)
 		(text "triggerOut" (rect 0 0 48 12)(font "Arial" ))
-		(text "triggerOut" (rect 155 27 195 39)(font "Arial" ))
+		(text "triggerOut" (rect 155 27 203 39)(font "Arial" ))
 		(line (pt 216 32)(pt 200 32))
 	)
 	(port
 		(pt 216 48)
 		(output)
 		(text "dataOut[2..0]" (rect 0 0 64 12)(font "Arial" ))
-		(text "dataOut[2..0]" (rect 141 43 195 55)(font "Arial" ))
+		(text "dataOut[2..0]" (rect 141 43 205 55)(font "Arial" ))
 		(line (pt 216 48)(pt 200 48)(line_width 3))
 	)
 	(drawing
 		(rectangle (rect 16 16 200 96))
+	)
+)
+(symbol
+	(rect 104 168 344 336)
+	(text "PLL_LogicAnalyzer" (rect 64 0 196 16)(font "Arial" (font_size 10)))
+	(text "inst1" (rect 8 152 31 164)(font "Arial" ))
+	(port
+		(pt 0 64)
+		(input)
+		(text "inclk0" (rect 0 0 31 14)(font "Arial" (font_size 8)))
+		(text "inclk0" (rect 4 50 35 64)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 40 64))
+	)
+	(port
+		(pt 240 64)
+		(output)
+		(text "c0" (rect 0 0 14 14)(font "Arial" (font_size 8)))
+		(text "c0" (rect 224 50 238 64)(font "Arial" (font_size 8)))
+	)
+	(port
+		(pt 240 80)
+		(output)
+		(text "c1" (rect 0 0 14 14)(font "Arial" (font_size 8)))
+		(text "c1" (rect 224 66 238 80)(font "Arial" (font_size 8)))
+	)
+	(drawing
+		(text "MAX 10" (rect 202 152 238 164)(font "Arial" ))
+		(text "inclk0 frequency: 10.000 MHz" (rect 50 59 197 71)(font "Arial" ))
+		(text "Operation Mode: Normal" (rect 50 72 169 84)(font "Arial" ))
+		(text "Clk " (rect 51 93 71 105)(font "Arial" ))
+		(text "Ratio" (rect 77 93 102 105)(font "Arial" ))
+		(text "Ph (dg)" (rect 109 93 144 105)(font "Arial" ))
+		(text "DC (%)" (rect 143 93 179 105)(font "Arial" ))
+		(text "c0" (rect 54 107 65 119)(font "Arial" ))
+		(text "1/1" (rect 82 107 97 119)(font "Arial" ))
+		(text "0.00" (rect 115 107 136 119)(font "Arial" ))
+		(text "50.00" (rect 147 107 174 119)(font "Arial" ))
+		(text "c1" (rect 54 121 65 133)(font "Arial" ))
+		(text "12/3125" (rect 72 121 110 133)(font "Arial" ))
+		(text "0.00" (rect 115 121 136 133)(font "Arial" ))
+		(text "50.00" (rect 147 121 174 133)(font "Arial" ))
+		(line (pt 0 0)(pt 241 0))
+		(line (pt 241 0)(pt 241 169))
+		(line (pt 0 169)(pt 241 169))
+		(line (pt 0 0)(pt 0 169))
+		(line (pt 48 91)(pt 175 91))
+		(line (pt 48 104)(pt 175 104))
+		(line (pt 48 118)(pt 175 118))
+		(line (pt 48 132)(pt 175 132))
+		(line (pt 48 91)(pt 48 132))
+		(line (pt 69 91)(pt 69 132)(line_width 3))
+		(line (pt 106 91)(pt 106 132)(line_width 3))
+		(line (pt 140 91)(pt 140 132)(line_width 3))
+		(line (pt 174 91)(pt 174 132))
+		(line (pt 40 48)(pt 207 48))
+		(line (pt 207 48)(pt 207 151))
+		(line (pt 40 151)(pt 207 151))
+		(line (pt 40 48)(pt 40 151))
+		(line (pt 239 64)(pt 207 64))
+		(line (pt 239 80)(pt 207 80))
+	)
+)
+(symbol
+	(rect 816 448 1096 656)
+	(text "FIFO_to_UART_Controller" (rect 5 0 134 12)(font "Arial" ))
+	(text "inst3" (rect 8 192 31 204)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "rst" (rect 0 0 12 12)(font "Arial" ))
+		(text "rst" (rect 21 27 33 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "clk" (rect 0 0 14 12)(font "Arial" ))
+		(text "clk" (rect 21 43 35 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "FIFO_wrfull" (rect 0 0 57 12)(font "Arial" ))
+		(text "FIFO_wrfull" (rect 21 59 78 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "FIFO_rdempty" (rect 0 0 73 12)(font "Arial" ))
+		(text "FIFO_rdempty" (rect 21 75 94 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "UART_txempty" (rect 0 0 76 12)(font "Arial" ))
+		(text "UART_txempty" (rect 21 91 97 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "UART_rxempty" (rect 0 0 76 12)(font "Arial" ))
+		(text "UART_rxempty" (rect 21 107 97 119)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "UART_rx_data[7..0]" (rect 0 0 97 12)(font "Arial" ))
+		(text "UART_rx_data[7..0]" (rect 21 123 118 135)(font "Arial" ))
+		(line (pt 0 128)(pt 16 128)(line_width 3))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "rxclk" (rect 0 0 23 12)(font "Arial" ))
+		(text "rxclk" (rect 21 139 44 151)(font "Arial" ))
+		(line (pt 0 144)(pt 16 144))
+	)
+	(port
+		(pt 280 32)
+		(output)
+		(text "FIFO_rdreq" (rect 0 0 56 12)(font "Arial" ))
+		(text "FIFO_rdreq" (rect 212 27 259 39)(font "Arial" ))
+		(line (pt 280 32)(pt 264 32))
+	)
+	(port
+		(pt 280 48)
+		(output)
+		(text "UART_rst" (rect 0 0 48 12)(font "Arial" ))
+		(text "UART_rst" (rect 219 43 259 55)(font "Arial" ))
+		(line (pt 280 48)(pt 264 48))
+	)
+	(port
+		(pt 280 64)
+		(output)
+		(text "UART_uld_rx_data" (rect 0 0 92 12)(font "Arial" ))
+		(text "UART_uld_rx_data" (rect 182 59 259 71)(font "Arial" ))
+		(line (pt 280 64)(pt 264 64))
+	)
+	(port
+		(pt 280 80)
+		(output)
+		(text "UART_tx_enable" (rect 0 0 82 12)(font "Arial" ))
+		(text "UART_tx_enable" (rect 190 75 259 87)(font "Arial" ))
+		(line (pt 280 80)(pt 264 80))
+	)
+	(port
+		(pt 280 96)
+		(output)
+		(text "UART_rx_enable" (rect 0 0 82 12)(font "Arial" ))
+		(text "UART_rx_enable" (rect 190 91 259 103)(font "Arial" ))
+		(line (pt 280 96)(pt 264 96))
+	)
+	(port
+		(pt 280 112)
+		(output)
+		(text "triggerBlock_Syncrst" (rect 0 0 102 12)(font "Arial" ))
+		(text "triggerBlock_Syncrst" (rect 173 107 259 119)(font "Arial" ))
+		(line (pt 280 112)(pt 264 112))
+	)
+	(port
+		(pt 280 128)
+		(output)
+		(text "triggerBlock_Mask[2..0]" (rect 0 0 115 12)(font "Arial" ))
+		(text "triggerBlock_Mask[2..0]" (rect 162 123 259 135)(font "Arial" ))
+		(line (pt 280 128)(pt 264 128)(line_width 3))
+	)
+	(port
+		(pt 280 144)
+		(output)
+		(text "Bit_Padder_Sel[1..0]" (rect 0 0 100 12)(font "Arial" ))
+		(text "Bit_Padder_Sel[1..0]" (rect 175 139 259 151)(font "Arial" ))
+		(line (pt 280 144)(pt 264 144)(line_width 3))
+	)
+	(port
+		(pt 280 160)
+		(output)
+		(text "state_debug[4..0]" (rect 0 0 86 12)(font "Arial" ))
+		(text "state_debug[4..0]" (rect 187 155 259 167)(font "Arial" ))
+		(line (pt 280 160)(pt 264 160)(line_width 3))
+	)
+	(port
+		(pt 280 176)
+		(output)
+		(text "UART_ld_tx_data" (rect 0 0 86 12)(font "Arial" ))
+		(text "UART_ld_tx_data" (rect 187 171 259 183)(font "Arial" ))
+		(line (pt 280 176)(pt 264 176))
+	)
+	(drawing
+		(rectangle (rect 16 16 264 192))
 	)
 )
 (connector
@@ -554,10 +643,6 @@ agreement for further details.
 	(bus)
 )
 (connector
-	(pt 312 264)
-	(pt 456 264)
-)
-(connector
 	(pt 392 496)
 	(pt 544 496)
 	(bus)
@@ -571,18 +656,9 @@ agreement for further details.
 	(pt 616 360)
 )
 (connector
-	(pt 8 480)
-	(pt 16 480)
-	(bus)
-)
-(connector
 	(pt 16 480)
 	(pt 176 480)
 	(bus)
-)
-(connector
-	(pt 24 264)
-	(pt 176 264)
 )
 (connector
 	(pt 792 312)
@@ -590,40 +666,8 @@ agreement for further details.
 	(bus)
 )
 (connector
-	(pt 1360 264)
-	(pt 1424 264)
-)
-(connector
 	(pt 872 328)
 	(pt 872 424)
-	(bus)
-)
-(connector
-	(pt 1152 696)
-	(pt 1152 544)
-)
-(connector
-	(pt 1152 544)
-	(pt 1080 544)
-)
-(connector
-	(pt 1080 560)
-	(pt 1128 560)
-	(bus)
-)
-(connector
-	(pt 1128 560)
-	(pt 1128 648)
-	(bus)
-)
-(connector
-	(pt 88 496)
-	(pt 88 648)
-	(bus)
-)
-(connector
-	(pt 88 648)
-	(pt 1128 648)
 	(bus)
 )
 (connector
@@ -693,36 +737,8 @@ agreement for further details.
 	(pt 800 528)
 )
 (connector
-	(pt 1360 280)
-	(pt 1368 280)
-)
-(connector
-	(pt 1368 632)
-	(pt 1368 280)
-)
-(connector
-	(pt 1368 632)
-	(pt 800 632)
-)
-(connector
 	(pt 816 544)
 	(pt 800 544)
-)
-(connector
-	(pt 800 544)
-	(pt 800 632)
-)
-(connector
-	(pt 1080 480)
-	(pt 1088 480)
-)
-(connector
-	(pt 1088 432)
-	(pt 1088 480)
-)
-(connector
-	(pt 1088 432)
-	(pt 824 432)
 )
 (connector
 	(pt 824 432)
@@ -741,112 +757,12 @@ agreement for further details.
 	(pt 576 256)
 )
 (connector
-	(pt 1080 576)
-	(pt 1120 576)
-	(bus)
-)
-(connector
-	(pt 1120 576)
-	(pt 1120 424)
-	(bus)
-)
-(connector
-	(pt 872 424)
-	(pt 1120 424)
-	(bus)
-)
-(connector
-	(pt 1080 528)
-	(pt 1112 528)
-)
-(connector
-	(pt 1112 528)
-	(pt 1112 328)
-)
-(connector
-	(pt 1160 328)
-	(pt 1112 328)
-)
-(connector
-	(pt 1080 496)
-	(pt 1096 496)
-)
-(connector
-	(pt 1096 496)
-	(pt 1096 264)
-)
-(connector
-	(pt 1096 264)
-	(pt 1160 264)
-)
-(connector
-	(pt 1080 512)
-	(pt 1104 512)
-)
-(connector
-	(pt 1104 296)
-	(pt 1104 512)
-)
-(connector
-	(pt 1104 296)
-	(pt 1160 296)
-)
-(connector
-	(pt 1160 344)
-	(pt 1128 344)
-)
-(connector
-	(pt 1128 416)
-	(pt 1128 344)
-)
-(connector
-	(pt 1128 416)
-	(pt 808 416)
-)
-(connector
-	(pt 808 416)
-	(pt 808 448)
-)
-(connector
-	(pt 808 448)
-	(pt 456 448)
-)
-(connector
-	(pt 456 424)
-	(pt 456 448)
-)
-(connector
-	(pt 456 448)
-	(pt 456 536)
-)
-(connector
-	(pt 872 200)
-	(pt 456 200)
-)
-(connector
-	(pt 456 264)
-	(pt 456 328)
-)
-(connector
-	(pt 1144 200)
-	(pt 1144 280)
-)
-(connector
-	(pt 1144 280)
-	(pt 1160 280)
-)
-(connector
 	(pt 872 216)
 	(pt 816 216)
 )
 (connector
 	(pt 816 216)
 	(pt 816 480)
-)
-(connector
-	(pt 1080 592)
-	(pt 1400 592)
-	(bus)
 )
 (connector
 	(pt 680 480)
@@ -859,16 +775,6 @@ agreement for further details.
 (connector
 	(pt 1152 312)
 	(pt 1152 136)
-	(bus)
-)
-(connector
-	(pt 1080 312)
-	(pt 1152 312)
-	(bus)
-)
-(connector
-	(pt 1152 312)
-	(pt 1160 312)
 	(bus)
 )
 (connector
@@ -881,20 +787,8 @@ agreement for further details.
 	(pt 152 696)
 )
 (connector
-	(pt 152 696)
-	(pt 1152 696)
-)
-(connector
 	(pt 456 64)
 	(pt 544 64)
-)
-(connector
-	(pt 456 64)
-	(pt 456 200)
-)
-(connector
-	(pt 456 200)
-	(pt 456 264)
 )
 (connector
 	(pt 16 616)
@@ -905,41 +799,324 @@ agreement for further details.
 	(pt 1064 80)
 )
 (connector
-	(pt 1064 80)
-	(pt 1064 200)
-)
-(connector
-	(pt 1032 200)
-	(pt 1064 200)
-)
-(connector
-	(pt 1064 200)
-	(pt 1144 200)
-)
-(connector
-	(pt 744 528)
-	(pt 800 528)
-)
-(connector
 	(pt 800 528)
 	(pt 816 528)
 )
 (connector
-	(pt 744 664)
-	(pt 744 528)
+	(pt 872 200)
+	(pt 528 200)
 )
 (connector
-	(pt 744 664)
-	(pt 1400 664)
+	(pt 24 232)
+	(pt 104 232)
+)
+(connector
+	(pt 344 232)
+	(pt 456 232)
+)
+(connector
+	(pt 456 64)
+	(pt 456 232)
+)
+(connector
+	(pt 456 232)
+	(pt 456 328)
+)
+(connector
+	(pt 528 152)
+	(pt 1064 152)
+)
+(connector
+	(pt 528 152)
+	(pt 528 200)
+)
+(connector
+	(pt 528 200)
+	(pt 528 248)
+)
+(connector
+	(pt 1064 80)
+	(pt 1064 152)
+)
+(connector
+	(pt 1064 152)
+	(pt 1064 200)
+)
+(connector
+	(pt 872 424)
+	(pt 1120 424)
+	(bus)
+)
+(connector
+	(pt 1120 592)
+	(pt 1120 424)
+	(bus)
+)
+(connector
+	(pt 1120 592)
+	(pt 1096 592)
+	(bus)
+)
+(connector
+	(pt 1112 528)
+	(pt 1096 528)
+)
+(connector
+	(pt 1104 432)
+	(pt 824 432)
+)
+(connector
+	(pt 1104 432)
+	(pt 1104 480)
+)
+(connector
+	(pt 1104 480)
+	(pt 1096 480)
+)
+(connector
+	(pt 1112 528)
+	(pt 1112 328)
+)
+(connector
+	(pt 1144 200)
+	(pt 1144 280)
+)
+(connector
+	(pt 1080 312)
+	(pt 1152 312)
+	(bus)
+)
+(connector
+	(pt 1144 280)
+	(pt 1200 280)
+)
+(connector
+	(pt 1152 312)
+	(pt 1200 312)
+	(bus)
+)
+(connector
+	(pt 1112 328)
+	(pt 1200 328)
+)
+(connector
+	(pt 1400 264)
+	(pt 1464 264)
+)
+(connector
+	(pt 1200 344)
+	(pt 1088 344)
+)
+(connector
+	(pt 1200 264)
+	(pt 1128 264)
+)
+(connector
+	(pt 1128 496)
+	(pt 1128 264)
+)
+(connector
+	(pt 1128 496)
+	(pt 1096 496)
+)
+(connector
+	(pt 152 696)
+	(pt 1152 696)
+)
+(connector
+	(pt 1200 296)
+	(pt 1136 296)
+)
+(connector
+	(pt 1136 296)
+	(pt 1136 512)
+)
+(connector
+	(pt 1096 512)
+	(pt 1136 512)
+)
+(connector
+	(pt 1096 544)
+	(pt 1144 544)
+)
+(connector
+	(pt 1144 544)
+	(pt 1144 376)
+)
+(connector
+	(pt 1200 376)
+	(pt 1144 376)
+)
+(connector
+	(pt 1096 560)
+	(pt 1152 560)
+)
+(connector
+	(pt 1152 560)
+	(pt 1152 696)
+)
+(connector
+	(pt 1400 280)
+	(pt 1416 280)
+)
+(connector
+	(pt 88 496)
+	(pt 88 672)
+	(bus)
+)
+(connector
+	(pt 88 672)
+	(pt 1128 672)
+	(bus)
+)
+(connector
+	(pt 1400 296)
+	(pt 1408 296)
+	(bus)
+)
+(connector
+	(pt 816 576)
+	(pt 808 576)
+	(bus)
+)
+(connector
+	(pt 1408 296)
+	(pt 1408 680)
+	(bus)
+)
+(connector
+	(pt 1408 680)
+	(pt 808 680)
+	(bus)
+)
+(connector
+	(pt 808 576)
+	(pt 808 680)
+	(bus)
+)
+(connector
+	(pt 1424 704)
+	(pt 1424 312)
+)
+(connector
+	(pt 1424 704)
+	(pt 784 704)
+)
+(connector
+	(pt 784 704)
+	(pt 784 560)
+)
+(connector
+	(pt 784 560)
+	(pt 816 560)
+)
+(connector
+	(pt 1200 392)
+	(pt 1192 392)
+)
+(connector
+	(pt 1192 480)
+	(pt 1192 392)
+)
+(connector
+	(pt 1192 480)
+	(pt 1336 480)
+)
+(connector
+	(pt 1336 480)
+	(pt 1336 504)
+)
+(connector
+	(pt 1336 504)
+	(pt 1328 504)
+)
+(connector
+	(pt 1096 624)
+	(pt 1184 624)
+)
+(connector
+	(pt 1184 624)
+	(pt 1184 360)
+)
+(connector
+	(pt 1184 360)
+	(pt 1200 360)
+)
+(connector
+	(pt 800 544)
+	(pt 800 664)
+)
+(connector
+	(pt 1416 280)
+	(pt 1416 664)
+)
+(connector
+	(pt 800 664)
+	(pt 1416 664)
+)
+(connector
+	(pt 456 424)
+	(pt 456 536)
+)
+(connector
+	(pt 1088 344)
+	(pt 1088 200)
+)
+(connector
+	(pt 1064 200)
+	(pt 1088 200)
+)
+(connector
+	(pt 1088 200)
+	(pt 1144 200)
+)
+(connector
+	(pt 496 248)
+	(pt 496 592)
+)
+(connector
+	(pt 496 592)
+	(pt 816 592)
+)
+(connector
+	(pt 344 248)
+	(pt 496 248)
+)
+(connector
+	(pt 496 248)
+	(pt 528 248)
+)
+(connector
+	(pt 1400 312)
+	(pt 1424 312)
+)
+(connector
+	(pt 1424 312)
+	(pt 1464 312)
+)
+(connector
+	(pt 1128 576)
+	(pt 1128 672)
+	(bus)
+)
+(connector
+	(pt 1096 576)
+	(pt 1128 576)
+	(bus)
+)
+(connector
+	(pt 1456 608)
+	(pt 1096 608)
+	(bus)
 )
 (junction (pt 456 360))
-(junction (pt 16 480))
 (junction (pt 456 328))
 (junction (pt 456 424))
-(junction (pt 456 448))
-(junction (pt 456 264))
 (junction (pt 816 480))
 (junction (pt 1152 312))
-(junction (pt 456 200))
-(junction (pt 1064 200))
-(junction (pt 800 528))
+(junction (pt 456 232))
+(junction (pt 528 200))
+(junction (pt 1064 152))
+(junction (pt 1088 200))
+(junction (pt 496 248))
+(junction (pt 1424 312))

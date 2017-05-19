@@ -17,9 +17,10 @@ Sim dir               :  simulation\modelsim
 
 Info: Starting NativeLink simulation with ModelSim-Altera software
 Sourced NativeLink script c:/programy/intelfpga_lite/16.1/quartus/common/tcl/internal/nativelink/modelsim.tcl
-Warning: File LogicAnalyzer_run_msim_gate_verilog.do already exists - backing up current file as LogicAnalyzer_run_msim_gate_verilog.do.bak
+Warning: File LogicAnalyzer_run_msim_gate_verilog.do already exists - backing up current file as LogicAnalyzer_run_msim_gate_verilog.do.bak5
 Probing transcript
 ModelSim-Altera Info: # Reading C:/Programy/intelFPGA_lite/16.1/modelsim_ase/tcl/vsim/pref.tcl
+ModelSim-Altera Info: # ERROR: No extended dataflow license exists
 ModelSim-Altera Info: # do LogicAnalyzer_run_msim_gate_verilog.do
 ModelSim-Altera Info: # if {[file exists gate_work]} {
 ModelSim-Altera Info: # 	vdel -lib gate_work -all
@@ -33,103 +34,44 @@ ModelSim-Altera Info: # Modifying modelsim.ini
 ModelSim-Altera Info: # 
 ModelSim-Altera Info: # vlog -vlog01compat -work work +incdir+. {LogicAnalyzer.vo}
 ModelSim-Altera Info: # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-ModelSim-Altera Info: # Start time: 10:50:07 on Jan 11,2017
+ModelSim-Altera Info: # Start time: 23:53:48 on Jan 11,2017
 ModelSim-Altera Info: # vlog -reportprogress 300 -vlog01compat -work work "+incdir+." LogicAnalyzer.vo 
 ModelSim-Altera Info: # -- Compiling module LogicAnalyzer
 ModelSim-Altera Info: # 
 ModelSim-Altera Info: # Top level modules:
 ModelSim-Altera Info: # 	LogicAnalyzer
-ModelSim-Altera Info: # End time: 10:50:07 on Jan 11,2017, Elapsed time: 0:00:00
+ModelSim-Altera Info: # End time: 23:53:49 on Jan 11,2017, Elapsed time: 0:00:01
 ModelSim-Altera Info: # Errors: 0, Warnings: 0
 ModelSim-Altera Info: # 
 ModelSim-Altera Info: # vlog -vlog01compat -work work +incdir+D:/Dropbox/Dropbox/Sem7/PRUS/projekty_git/Logic_Analyzer_MAX10_FPGA {D:/Dropbox/Dropbox/Sem7/PRUS/projekty_git/Logic_Analyzer_MAX10_FPGA/LogicAnalyzer_tb.v}
 ModelSim-Altera Info: # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-ModelSim-Altera Info: # Start time: 10:50:07 on Jan 11,2017
+ModelSim-Altera Info: # Start time: 23:53:49 on Jan 11,2017
 ModelSim-Altera Info: # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Dropbox/Dropbox/Sem7/PRUS/projekty_git/Logic_Analyzer_MAX10_FPGA" D:/Dropbox/Dropbox/Sem7/PRUS/projekty_git/Logic_Analyzer_MAX10_FPGA/LogicAnalyzer_tb.v 
 ModelSim-Altera Info: # -- Compiling module LogicAnalyzer_tb
 ModelSim-Altera Info: # 
 ModelSim-Altera Info: # Top level modules:
 ModelSim-Altera Info: # 	LogicAnalyzer_tb
-ModelSim-Altera Info: # End time: 10:50:07 on Jan 11,2017, Elapsed time: 0:00:00
+ModelSim-Altera Info: # End time: 23:53:49 on Jan 11,2017, Elapsed time: 0:00:00
 ModelSim-Altera Info: # Errors: 0, Warnings: 0
 ModelSim-Altera Info: # 
 ModelSim-Altera Info: # vsim -t 1ps +transport_int_delays +transport_path_delays -L altera_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L gate_work -L work -voptargs="+acc"  LogicAnalyzer_tb
 ModelSim-Altera Info: # vsim -t 1ps "+transport_int_delays" "+transport_path_delays" -L altera_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L gate_work -L work -voptargs=""+acc"" LogicAnalyzer_tb 
-ModelSim-Altera Info: # Start time: 10:50:08 on Jan 11,2017
+ModelSim-Altera Info: # Start time: 23:53:49 on Jan 11,2017
 ModelSim-Altera Info: # Loading work.LogicAnalyzer_tb
 ModelSim-Altera Info: # Loading work.LogicAnalyzer
 ModelSim-Altera Info: # Loading altera_ver.dffeas
-ModelSim-Altera Error: # ** Error: (vsim-3389) D:/Dropbox/Dropbox/Sem7/PRUS/projekty_git/Logic_Analyzer_MAX10_FPGA/LogicAnalyzer_tb.v(19): Port 'pll_output_debug' not found in the connected module (5th connection).
+ModelSim-Altera Error: # ** Error: (vsim-3063) D:/Dropbox/Dropbox/Sem7/PRUS/projekty_git/Logic_Analyzer_MAX10_FPGA/LogicAnalyzer_tb.v(19): Port 'pll_output_debug' not found in the connected module (5th connection).
 ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /LogicAnalyzer_tb/LogicAnalyzer_inst File: LogicAnalyzer.vo
-ModelSim-Altera Error: # ** Error: (vsim-3389) D:/Dropbox/Dropbox/Sem7/PRUS/projekty_git/Logic_Analyzer_MAX10_FPGA/LogicAnalyzer_tb.v(19): Port 'clk_div16_debug' not found in the connected module (6th connection).
-ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /LogicAnalyzer_tb/LogicAnalyzer_inst File: LogicAnalyzer.vo
-ModelSim-Altera Error: # ** Error: (vsim-3389) D:/Dropbox/Dropbox/Sem7/PRUS/projekty_git/Logic_Analyzer_MAX10_FPGA/LogicAnalyzer_tb.v(19): Port 'dataOut_debug' not found in the connected module (7th connection).
-ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /LogicAnalyzer_tb/LogicAnalyzer_inst File: LogicAnalyzer.vo
-ModelSim-Altera Error: # ** Fatal: (vsim-3365) D:/Dropbox/Dropbox/Sem7/PRUS/projekty_git/Logic_Analyzer_MAX10_FPGA/LogicAnalyzer_tb.v(19): Too many port connections. Expected 5, found 8.
-ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /LogicAnalyzer_tb/LogicAnalyzer_inst File: LogicAnalyzer.vo
-ModelSim-Altera Info: # FATAL ERROR while loading design
+ModelSim-Altera Info: # Loading altera_ver.PRIM_GDFF_LOW
+ModelSim-Altera Warning: # ** Warning: (vsim-3017) LogicAnalyzer.vo(7655): [TFMPC] - Too few port connections. Expected 8, found 7.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /LogicAnalyzer_tb/LogicAnalyzer_inst/\~QUARTUS_CREATED_ADC1~  File: nofile
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) LogicAnalyzer.vo(7655): [TFMPC] - Missing connection for port 'clk_dft'.
 ModelSim-Altera Info: # Error loading design
 ModelSim-Altera Info: # Error: Error loading design
 ModelSim-Altera Info: #        Pausing macro execution
 ModelSim-Altera Info: # MACRO ./LogicAnalyzer_run_msim_gate_verilog.do PAUSED at line 12
-ModelSim-Altera Info: do LogicAnalyzer_run_msim_gate_verilog.do
-ModelSim-Altera Info: # transcript on
-ModelSim-Altera Info: # if {[file exists gate_work]} {
-ModelSim-Altera Info: # 	vdel -lib gate_work -all
-ModelSim-Altera Info: # }
-ModelSim-Altera Info: # vlib gate_work
-ModelSim-Altera Info: # vmap work gate_work
-ModelSim-Altera Info: # Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
-ModelSim-Altera Info: # vmap work gate_work 
-ModelSim-Altera Info: # Modifying modelsim.ini
-ModelSim-Altera Info: # 
-ModelSim-Altera Info: # vlog -vlog01compat -work work +incdir+. {LogicAnalyzer.vo}
-ModelSim-Altera Info: # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-ModelSim-Altera Info: # Start time: 10:52:07 on Jan 11,2017
-ModelSim-Altera Info: # vlog -reportprogress 300 -vlog01compat -work work "+incdir+." LogicAnalyzer.vo 
-ModelSim-Altera Info: # -- Compiling module LogicAnalyzer
-ModelSim-Altera Info: # 
-ModelSim-Altera Info: # Top level modules:
-ModelSim-Altera Info: # 	LogicAnalyzer
-ModelSim-Altera Info: # End time: 10:52:07 on Jan 11,2017, Elapsed time: 0:00:00
-ModelSim-Altera Info: # Errors: 0, Warnings: 0
-ModelSim-Altera Info: # 
-ModelSim-Altera Info: # vlog -vlog01compat -work work +incdir+D:/Dropbox/Dropbox/Sem7/PRUS/projekty_git/Logic_Analyzer_MAX10_FPGA {D:/Dropbox/Dropbox/Sem7/PRUS/projekty_git/Logic_Analyzer_MAX10_FPGA/LogicAnalyzer_tb.v}
-ModelSim-Altera Info: # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-ModelSim-Altera Info: # Start time: 10:52:07 on Jan 11,2017
-ModelSim-Altera Info: # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Dropbox/Dropbox/Sem7/PRUS/projekty_git/Logic_Analyzer_MAX10_FPGA" D:/Dropbox/Dropbox/Sem7/PRUS/projekty_git/Logic_Analyzer_MAX10_FPGA/LogicAnalyzer_tb.v 
-ModelSim-Altera Info: # -- Compiling module LogicAnalyzer_tb
-ModelSim-Altera Info: # 
-ModelSim-Altera Info: # Top level modules:
-ModelSim-Altera Info: # 	LogicAnalyzer_tb
-ModelSim-Altera Info: # End time: 10:52:07 on Jan 11,2017, Elapsed time: 0:00:00
-ModelSim-Altera Info: # Errors: 0, Warnings: 0
-ModelSim-Altera Info: # 
-ModelSim-Altera Info: # vsim -t 1ps +transport_int_delays +transport_path_delays -L altera_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L gate_work -L work -voptargs="+acc"  LogicAnalyzer_tb
-ModelSim-Altera Info: # vsim -t 1ps "+transport_int_delays" "+transport_path_delays" -L altera_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L gate_work -L work -voptargs=""+acc"" LogicAnalyzer_tb 
-ModelSim-Altera Info: # Start time: 10:50:08 on Jan 11,2017
-ModelSim-Altera Info: # Loading work.LogicAnalyzer_tb
-ModelSim-Altera Info: # Loading work.LogicAnalyzer
-ModelSim-Altera Info: # Loading altera_ver.dffeas
-ModelSim-Altera Info: # Loading altera_ver.PRIM_GDFF_LOW
-ModelSim-Altera Warning: # ** Warning: (vsim-3017) LogicAnalyzer.vo(2745): [TFMPC] - Too few port connections. Expected 8, found 7.
-ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /LogicAnalyzer_tb/LogicAnalyzer_inst/\~QUARTUS_CREATED_ADC1~  File: nofile
-ModelSim-Altera Warning: # ** Warning: (vsim-3722) LogicAnalyzer.vo(2745): [TFMPC] - Missing connection for port 'clk_dft'.
-ModelSim-Altera Info: # 
-ModelSim-Altera Info: # add wave *
-ModelSim-Altera Info: # view structure
-ModelSim-Altera Info: # .main_pane.structure.interior.cs.body.struct
-ModelSim-Altera Info: # view signals
-ModelSim-Altera Info: # .main_pane.objects.interior.cs.body.tree
-ModelSim-Altera Info: # run -all
-ModelSim-Altera Info: #  Note : Fiftyfivenm PLL locked to incoming clock
-ModelSim-Altera Info: # Time: 300000  Instance: LogicAnalyzer_tb.LogicAnalyzer_inst.\PLL_LogicAnalyzer_inst|altpll_component|auto_generated|pll1 
-ModelSim-Altera Info: #  Note : Fiftyfivenm PLL locked to incoming clock
-ModelSim-Altera Info: # Time: 600000  Instance: LogicAnalyzer_tb.LogicAnalyzer_inst.\PLL_div16_inst|altpll_component|auto_generated|pll1 
-ModelSim-Altera Info: # Break key hit
-ModelSim-Altera Info: # Break at a source-protected location
-ModelSim-Altera Info: # End time: 10:53:29 on Jan 11,2017, Elapsed time: 0:03:21
-ModelSim-Altera Info: # Errors: 4, Warnings: 2
+ModelSim-Altera Info: # End time: 23:54:01 on Jan 11,2017, Elapsed time: 0:00:12
+ModelSim-Altera Info: # Errors: 1, Warnings: 2
 Error: Errors encountered while running modelsim do file
 Error: NativeLink simulation flow was NOT successful
 

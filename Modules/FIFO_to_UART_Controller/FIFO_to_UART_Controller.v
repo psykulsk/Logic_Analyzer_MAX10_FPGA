@@ -4,18 +4,26 @@ module FIFO_to_UART_Controller(
 	FIFO_wrfull,
 	FIFO_rdempty,
 	UART_txempty,
+	UART_rxempty,
+	
+	UART_rx_data,
+	
+	rxclk,
 	
 	FIFO_rdreq,
 	UART_rst,
-	UART_ld_tx_data,
+	UART_uld_rx_data,
 	UART_tx_enable,
+	UART_rx_enable,
+	
 	
 	triggerBlock_Syncrst,
 	triggerBlock_Mask,
 	
 	Bit_Padder_Sel,
 	
-	state_debug
+	state_debug,
+	UART_ld_tx_data
 );
 //Opis wejść/wyjść
 input wire rst;
@@ -23,14 +31,19 @@ input wire clk;			//Clock of the system
 input wire FIFO_wrfull;		//write-full flag from FIFO
 input wire FIFO_rdempty;		//read-empty flag.
 input wire UART_txempty;		//TxD-empty flag. Set when UART 8-bit data buffer is empty
+input wire UART_rxempty;
+input wire  [7:0]UART_rx_data;
+input wire rxclk;
 
 output reg FIFO_rdreq;
 output reg UART_rst;
 output reg UART_tx_enable;	//enables tx_tansmission.
+output reg UART_rx_enable;
 output reg UART_ld_tx_data;
+output reg UART_uld_rx_data;
 
 output reg triggerBlock_Syncrst;	//Triger Block has to be rst after each full read from FIFO
-output wire [2:0]triggerBlock_Mask;			//Masks which inputs trigger the TriggerBlock
+output reg [2:0]triggerBlock_Mask;		//Masks which inputs trigger the TriggerBlock
 
 output reg [1:0] Bit_Padder_Sel; //Used to select what type of data is pushed into UART
 											// 00 => Pipe (pads 3 bit sream with 5 zero bits)
@@ -65,16 +78,18 @@ always @ (posedge clk)	begin
 			state <= next_state;				
 end
 
-assign triggerBlock_Mask = 3'b111;
 	
 //Logika obliczania następnego stanu
 always @ * begin
+//	UART_rx_enable = 1'b1;
 	FIFO_rdreq = 1'b0;
 	UART_ld_tx_data= 1'b0;
 	UART_rst = 1'b0;
 	UART_tx_enable = 1'b1;
 	triggerBlock_Syncrst = 1'b1; // Trigger is disabled by default, except for the IDLE state
 	Bit_Padder_Sel = 2'b00;
+	triggerBlock_Mask = 3'b111;	
+	
 	
 	case(state)
 	INITIAL:	begin
@@ -145,8 +160,26 @@ always @ * begin
   														 end
 	default: next_state = state; // stay in current state - when hung it means reached default.
 endcase
-
 end
+
+//always @( posedge rxclk ) begin
+//	if( UART_rxempty ) 
+//		begin
+//		UART_uld_rx_data = 1'b0;
+//		end
+//	else 
+//		begin
+//		UART_uld_rx_data = 1'b1;
+//		end
+//		
+//end
+//
+//always @( UART_rx_data[7:0]) begin
+//	triggerBlock_Mask = UART_rx_data[2:0];
+//end
+	
+
+
   
 ////Logika wyjść
 //always @ (state)

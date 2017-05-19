@@ -115,7 +115,7 @@ set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda
 
 # end ENTITY(UART_rs232_0)
 # ------------------------
-set_global_assignment -name NUM_PARALLEL_PROCESSORS 1
+set_global_assignment -name NUM_PARALLEL_PROCESSORS ALL
 set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
 set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH LogicAnalyzer_tb -section_id eda_simulation
 set_global_assignment -name EDA_TEST_BENCH_NAME FIFO_to_UART_Controller_tb -section_id eda_simulation
@@ -135,7 +135,6 @@ set_location_assignment PIN_J16 -to dataIn[2]
 set_location_assignment PIN_M16 -to state_debug[0]
 set_location_assignment PIN_N16 -to state_debug[1]
 set_location_assignment PIN_P16 -to state_debug[2]
-set_location_assignment PIN_R16 -to state_debug[3]
 set_global_assignment -name VERILOG_FILE Modules/UART_ASIC_world/uart.v
 set_global_assignment -name VERILOG_FILE LogicAnalyzer.v
 set_global_assignment -name VERILOG_FILE Modules/Bit_Padder/Bit_Padder.v
@@ -159,4 +158,8 @@ set_global_assignment -name CDF_FILE output_files/Chain5.cdf
 set_location_assignment PIN_E15 -to clk_div16_debug
 set_location_assignment PIN_E16 -to pll_output_debug_sig
 set_global_assignment -name QIP_FILE PLL_115k.qip
+set_global_assignment -name CDF_FILE output_files/Chain1.cdf
+set_location_assignment PIN_G16 -to RxD
+set_location_assignment PIN_R16 -to rx_empty_debug
+set_global_assignment -name TIMEQUEST_MULTICORNER_ANALYSIS ON
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

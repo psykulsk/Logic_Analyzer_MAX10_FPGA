@@ -15,117 +15,132 @@
 
 // PROGRAM		"Quartus Prime"
 // VERSION		"Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition"
-// CREATED		"Tue Jan 10 22:09:11 2017"
+// CREATED		"Fri May 19 12:39:25 2017"
 
 module LogicAnalyzer(
 	inclk0_10MHz,
 	rst,
+	RxD,
 	dataIn,
 	TxD,
-	state_debug,
-	pll_output_debug_sig,
-	clk_div16_debug
-	
+	pll_output_debug,
+	clk_div16_debug,
+	rx_empty_debug,
+	state_debug
 );
 
 
 input wire	inclk0_10MHz;
 input wire	rst;
+input wire	RxD;
 input wire	[2:0] dataIn;
 output wire	TxD;
-output wire [4:0] state_debug;
-output wire pll_output_debug_sig;
-output wire clk_div16_debug;
+output wire	pll_output_debug;
+output wire	clk_div16_debug;
+output wire	rx_empty_debug;
+output wire	[4:0] state_debug;
+
+wire	SYNTHESIZED_WIRE_26;
+wire	SYNTHESIZED_WIRE_1;
+wire	SYNTHESIZED_WIRE_3;
+wire	[2:0] SYNTHESIZED_WIRE_4;
+wire	[2:0] SYNTHESIZED_WIRE_5;
+wire	[1:0] SYNTHESIZED_WIRE_6;
+wire	SYNTHESIZED_WIRE_8;
+wire	SYNTHESIZED_WIRE_9;
+wire	SYNTHESIZED_WIRE_10;
+wire	SYNTHESIZED_WIRE_11;
+wire	SYNTHESIZED_WIRE_27;
+wire	[7:0] SYNTHESIZED_WIRE_13;
+wire	SYNTHESIZED_WIRE_16;
+wire	[2:0] SYNTHESIZED_WIRE_17;
+wire	SYNTHESIZED_WIRE_18;
+wire	SYNTHESIZED_WIRE_20;
+wire	SYNTHESIZED_WIRE_21;
+wire	SYNTHESIZED_WIRE_23;
+wire	SYNTHESIZED_WIRE_24;
+wire	[7:0] SYNTHESIZED_WIRE_25;
+
+assign	pll_output_debug = SYNTHESIZED_WIRE_26;
+assign	clk_div16_debug = SYNTHESIZED_WIRE_27;
+assign	rx_empty_debug = SYNTHESIZED_WIRE_11;
 
 
-wire	PLL_output;
-wire	FIFO_rdreq;
-wire	FIFO_wrreq;
-wire	[2:0] FIFO_input_data;
-wire	[2:0] PLL_data_out;
-wire	[1:0] Bit_Padder_Sel;
-wire	FIFO_wrfull;
-wire	FIFO_rdempty;
-wire	UART_txempty;
-wire	triggerBlock_Syncrst;
-wire	[2:0] triggerBlock_Mask;
-wire	UART_rst;
-wire	clk_div16;
-wire	UART_ld_tx_data;
-wire	UART_tx_enable;
-wire	[7:0] UART_data_in;
 
 
-assign clk_div16_debug = clk_div16;
-assign pll_output_debug_sig = PLL_output;
-
-FIFO_smaller	FIFO_smaller_inst(
-	.rdclk(PLL_output),
-	.rdreq(FIFO_rdreq),
-	.wrclk(PLL_output),
-	.wrreq(FIFO_wrreq),
-	.data(FIFO_input_data),
-	.rdempty(FIFO_rdempty),
-	.wrfull(FIFO_wrfull),
-	.q(PLL_data_out));
+FIFO_smaller	b2v_inst(
+	.rdclk(SYNTHESIZED_WIRE_26),
+	.rdreq(SYNTHESIZED_WIRE_1),
+	.wrclk(SYNTHESIZED_WIRE_26),
+	.wrreq(SYNTHESIZED_WIRE_3),
+	.data(SYNTHESIZED_WIRE_4),
+	.rdempty(SYNTHESIZED_WIRE_9),
+	.wrfull(SYNTHESIZED_WIRE_8),
+	.q(SYNTHESIZED_WIRE_5));
 
 
-PLL_LogicAnalyzer	PLL_LogicAnalyzer_inst(
+PLL_LogicAnalyzer	b2v_inst1(
 	.inclk0(inclk0_10MHz),
-	.c0(PLL_output));
+	.c0(SYNTHESIZED_WIRE_26),
+	.c1(SYNTHESIZED_WIRE_27));
 
 
-Bit_Padder	Bit_Padder_inst(
-	.dataIn(PLL_data_out),
-	.optionSel(Bit_Padder_Sel),
-	.dataOut(UART_data_in));
+Bit_Padder	b2v_inst2(
+	.dataIn(SYNTHESIZED_WIRE_5),
+	.optionSel(SYNTHESIZED_WIRE_6),
+	.dataOut(SYNTHESIZED_WIRE_25));
 
 
-FIFO_to_UART_Controller	FIFO_to_UART_Controller_inst(
+FIFO_to_UART_Controller	b2v_inst3(
 	.rst(rst),
-	.clk(PLL_output),
-	.FIFO_wrfull(FIFO_wrfull),
-	.FIFO_rdempty(FIFO_rdempty),
-	.UART_txempty(UART_txempty),
-	.FIFO_rdreq(FIFO_rdreq),
-	.UART_rst(UART_rst),
-	.UART_ld_tx_data(UART_ld_tx_data),
-	.UART_tx_enable(UART_tx_enable),
-	.triggerBlock_Syncrst(triggerBlock_Syncrst),
-	.Bit_Padder_Sel(Bit_Padder_Sel),
+	.clk(SYNTHESIZED_WIRE_26),
+	.FIFO_wrfull(SYNTHESIZED_WIRE_8),
+	.FIFO_rdempty(SYNTHESIZED_WIRE_9),
+	.UART_txempty(SYNTHESIZED_WIRE_10),
+	.UART_rxempty(SYNTHESIZED_WIRE_11),
+	.rxclk(SYNTHESIZED_WIRE_27),
+	.UART_rx_data(SYNTHESIZED_WIRE_13),
+	.FIFO_rdreq(SYNTHESIZED_WIRE_1),
+	.UART_rst(SYNTHESIZED_WIRE_18),
+	.UART_uld_rx_data(SYNTHESIZED_WIRE_20),
+	.UART_tx_enable(SYNTHESIZED_WIRE_21),
+	.UART_rx_enable(SYNTHESIZED_WIRE_24),
+	.triggerBlock_Syncrst(SYNTHESIZED_WIRE_16),
+	.UART_ld_tx_data(SYNTHESIZED_WIRE_23),
+	.Bit_Padder_Sel(SYNTHESIZED_WIRE_6),
 	.state_debug(state_debug),
-	.triggerBlock_Mask(triggerBlock_Mask));
+	.triggerBlock_Mask(SYNTHESIZED_WIRE_17));
 
 
-	PLL_115k	PLL_115k_inst (
-	.inclk0 ( PLL_output ),
-	.c0 ( clk_div16 )
+CLK_Div_16	b2v_inst4(
+	.clk_in(SYNTHESIZED_WIRE_27),
+	.reset(rst)
 	);
 
 
-
-TriggerBlock	TriggerBlock_inst(
-	.clk_PLL(PLL_output),
-	.reset(triggerBlock_Syncrst),
+TriggerBlock	b2v_TriggerBlock_inst(
+	.clk_PLL(SYNTHESIZED_WIRE_26),
+	.reset(SYNTHESIZED_WIRE_16),
 	.dataIn(dataIn),
-	.triggerMask(triggerBlock_Mask),
-	.triggerOut(FIFO_wrreq),
-	.dataOut(FIFO_input_data));
+	.triggerMask(SYNTHESIZED_WIRE_17),
+	.triggerOut(SYNTHESIZED_WIRE_3),
+	.dataOut(SYNTHESIZED_WIRE_4));
 
-uart uart_inst(
-.reset(UART_rst)          ,
-.txclk(clk_div16)          ,
-.ld_tx_data(UART_ld_tx_data)     ,
-.tx_data(UART_data_in)        ,
-.tx_enable(UART_tx_enable)      ,
-.tx_out(TxD)         ,
-.tx_empty(UART_txempty)       ,
-.rxclk()          ,
-.uld_rx_data()    ,
-.rx_data()        ,
-.rx_enable()      ,
-.rx_in()          ,
-.rx_empty()
-);
+
+uart	b2v_uart_inst(
+	.reset(SYNTHESIZED_WIRE_18),
+	.txclk(SYNTHESIZED_WIRE_27),
+	.ld_tx_data(SYNTHESIZED_WIRE_20),
+	.tx_enable(SYNTHESIZED_WIRE_21),
+	.rxclk(SYNTHESIZED_WIRE_27),
+	.uld_rx_data(SYNTHESIZED_WIRE_23),
+	.rx_enable(SYNTHESIZED_WIRE_24),
+	.rx_in(RxD),
+	.tx_data(SYNTHESIZED_WIRE_25),
+	.tx_out(TxD),
+	.tx_empty(SYNTHESIZED_WIRE_10),
+	.rx_empty(SYNTHESIZED_WIRE_11),
+	.rx_data(SYNTHESIZED_WIRE_13));
+
 
 endmodule
