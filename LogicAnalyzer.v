@@ -15,7 +15,7 @@
 
 // PROGRAM		"Quartus Prime"
 // VERSION		"Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition"
-// CREATED		"Fri May 19 14:28:13 2017"
+// CREATED		"Fri May 19 15:43:28 2017"
 
 module LogicAnalyzer(
 	inclk0_10MHz,
@@ -26,7 +26,8 @@ module LogicAnalyzer(
 	pll_output_debug,
 	clk_div16_debug,
 	dataOut_debug,
-	state_debug
+	state_debug,
+	trigMask_debug
 );
 
 
@@ -39,6 +40,7 @@ output wire	pll_output_debug;
 output wire	clk_div16_debug;
 output wire	[7:0] dataOut_debug;
 output wire	[4:0] state_debug;
+output wire	[2:0] trigMask_debug;
 
 wire	SYNTHESIZED_WIRE_24;
 wire	SYNTHESIZED_WIRE_1;
@@ -64,6 +66,7 @@ wire	[7:0] SYNTHESIZED_WIRE_23;
 assign	pll_output_debug = SYNTHESIZED_WIRE_24;
 assign	clk_div16_debug = SYNTHESIZED_WIRE_17;
 assign	dataOut_debug = SYNTHESIZED_WIRE_23;
+assign	trigMask_debug = SYNTHESIZED_WIRE_15;
 
 
 

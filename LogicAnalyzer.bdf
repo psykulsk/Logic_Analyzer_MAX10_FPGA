@@ -164,6 +164,22 @@ agreement for further details.
 		(line (pt 78 12)(pt 82 8))
 	)
 )
+(pin
+	(output)
+	(rect 1512 544 1710 560)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "trigMask_debug[2..0]" (rect 90 0 192 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
 (symbol
 	(rect 1200 232 1400 440)
 	(text "uart" (rect 5 0 23 12)(font "Arial" ))
@@ -889,11 +905,6 @@ agreement for further details.
 	(pt 1152 544)
 )
 (connector
-	(pt 1128 648)
-	(pt 1128 560)
-	(bus)
-)
-(connector
 	(pt 592 496)
 	(pt 792 496)
 )
@@ -957,11 +968,6 @@ agreement for further details.
 (connector
 	(pt 1072 544)
 	(pt 1152 544)
-)
-(connector
-	(pt 1072 560)
-	(pt 1128 560)
-	(bus)
 )
 (connector
 	(pt 1072 576)
@@ -1066,6 +1072,26 @@ agreement for further details.
 	(pt 792 560)
 	(bus)
 )
+(connector
+	(pt 1072 560)
+	(pt 1128 560)
+	(bus)
+)
+(connector
+	(pt 1128 552)
+	(pt 1512 552)
+	(bus)
+)
+(connector
+	(pt 1128 552)
+	(pt 1128 560)
+	(bus)
+)
+(connector
+	(pt 1128 560)
+	(pt 1128 648)
+	(bus)
+)
 (junction (pt 456 360))
 (junction (pt 16 480))
 (junction (pt 456 328))
@@ -1075,3 +1101,4 @@ agreement for further details.
 (junction (pt 1152 312))
 (junction (pt 1064 200))
 (junction (pt 784 528))
+(junction (pt 1128 560))
