@@ -4,6 +4,8 @@ module FIFO_to_UART_Controller(
 	FIFO_wrfull,
 	FIFO_rdempty,
 	UART_txempty,
+	UART_rxdata,
+	UART_rxempty,
 	
 	FIFO_rdreq,
 	UART_rst,
@@ -15,7 +17,9 @@ module FIFO_to_UART_Controller(
 	
 	Bit_Padder_Sel,
 	
-	state_debug
+	state_debug,
+	UART_rx_enable,
+	UART_uld_rx_data,
 );
 //Opis wejść/wyjść
 input wire rst;
@@ -23,6 +27,8 @@ input wire clk;			//Clock of the system
 input wire FIFO_wrfull;		//write-full flag from FIFO
 input wire FIFO_rdempty;		//read-empty flag.
 input wire UART_txempty;		//TxD-empty flag. Set when UART 8-bit data buffer is empty
+input wire [7:0]UART_rxdata;
+input wire UART_rxempty;
 
 output reg FIFO_rdreq;
 output reg UART_rst;
@@ -39,6 +45,8 @@ output reg [1:0] Bit_Padder_Sel; //Used to select what type of data is pushed in
 											// 11 => Pipe  
 											
 output wire [4:0] state_debug;
+output reg UART_rx_enable;
+output reg UART_uld_rx_data;
 
 //Lokalne stałe
 localparam [4:0] INITIAL				= 5'b00000;
