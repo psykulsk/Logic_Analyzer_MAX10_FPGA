@@ -20,6 +20,7 @@ module FIFO_to_UART_Controller(
 	state_debug,
 	UART_rx_enable,
 	UART_uld_rx_data,
+	debug_pin,
 );
 //Opis wejść/wyjść
 input wire rst;
@@ -47,6 +48,7 @@ output reg [1:0] Bit_Padder_Sel; //Used to select what type of data is pushed in
 output wire [4:0] state_debug;
 output reg UART_rx_enable = 1'b1;
 output reg UART_uld_rx_data;
+output wire debug_pin;
 
 //Lokalne stałe
 localparam [4:0] INITIAL				= 5'b00000;
@@ -155,23 +157,17 @@ endcase
 
 end
 
-always @*
-begin
-	if(!UART_rxempty) begin
-		UART_uld_rx_data <= 1'b1;
-	end else begin
-		UART_uld_rx_data <= 1'b0;
-	end
-	
-end
+//always @*
+//begin
+//	if(!UART_rxempty) begin
+//		UART_uld_rx_data <= 1'b1;
+//	end else begin
+//		UART_uld_rx_data <= 1'b0;
+//	end
+//	
+//end
 
-always @*
-begin
-	if(UART_uld_rx_data) begin
-		triggerBlock_Mask[2:0] <= UART_rxdata[2:0];
-	end
 
-end
   
 ////Logika wyjść
 //always @ (state)

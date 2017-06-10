@@ -21,9 +21,9 @@ agreement for further details.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 16 16 296 224)
+	(rect 16 16 296 256)
 	(text "FIFO_to_UART_Controller" (rect 5 0 118 12)(font "Arial" ))
-	(text "inst" (rect 8 192 20 204)(font "Arial" ))
+	(text "inst" (rect 8 224 20 236)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -143,7 +143,14 @@ agreement for further details.
 		(text "UART_uld_rx_data" (rect 177 171 259 183)(font "Arial" ))
 		(line (pt 280 176)(pt 264 176)(line_width 1))
 	)
+	(port
+		(pt 280 192)
+		(output)
+		(text "debug_pin" (rect 0 0 40 12)(font "Arial" ))
+		(text "debug_pin" (rect 219 187 259 199)(font "Arial" ))
+		(line (pt 280 192)(pt 264 192)(line_width 1))
+	)
 	(drawing
-		(rectangle (rect 16 16 264 192)(line_width 1))
+		(rectangle (rect 16 16 264 224)(line_width 1))
 	)
 )

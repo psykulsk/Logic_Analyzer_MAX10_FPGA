@@ -15,7 +15,7 @@
 
 // PROGRAM		"Quartus Prime"
 // VERSION		"Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition"
-// CREATED		"Fri May 19 15:43:28 2017"
+// CREATED		"Sat Jun 10 20:03:33 2017"
 
 module LogicAnalyzer(
 	inclk0_10MHz,
@@ -25,6 +25,7 @@ module LogicAnalyzer(
 	TxD,
 	pll_output_debug,
 	clk_div16_debug,
+	debug_pin,
 	dataOut_debug,
 	state_debug,
 	trigMask_debug
@@ -38,6 +39,7 @@ input wire	[2:0] dataIn;
 output wire	TxD;
 output wire	pll_output_debug;
 output wire	clk_div16_debug;
+output wire	debug_pin;
 output wire	[7:0] dataOut_debug;
 output wire	[4:0] state_debug;
 output wire	[2:0] trigMask_debug;
@@ -109,6 +111,7 @@ FIFO_to_UART_Controller	b2v_inst3(
 	.triggerBlock_Syncrst(SYNTHESIZED_WIRE_14),
 	.UART_rx_enable(SYNTHESIZED_WIRE_22),
 	.UART_uld_rx_data(SYNTHESIZED_WIRE_21),
+	.debug_pin(debug_pin),
 	.Bit_Padder_Sel(SYNTHESIZED_WIRE_6),
 	.state_debug(state_debug),
 	.triggerBlock_Mask(SYNTHESIZED_WIRE_15));
