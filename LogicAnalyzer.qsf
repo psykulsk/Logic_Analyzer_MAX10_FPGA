@@ -140,7 +140,6 @@ set_global_assignment -name VERILOG_FILE LogicAnalyzer.v
 set_global_assignment -name VERILOG_FILE Modules/Bit_Padder/Bit_Padder.v
 set_global_assignment -name VERILOG_FILE Modules/Trigger_Block/TriggerBlock.v
 set_global_assignment -name VERILOG_FILE Modules/Pulse_Generator/PulseGenerator.v
-set_global_assignment -name VERILOG_FILE Modules/PLL_LogicAnalyzer/PLL_LogicAnalyzer.v
 set_global_assignment -name QIP_FILE Modules/PLL_LogicAnalyzer/PLL_LogicAnalyzer.qip
 set_global_assignment -name VERILOG_FILE Modules/FIFO_to_UART_Controller/FIFO_to_UART_Controller.v
 set_global_assignment -name VERILOG_FILE Modules/FIFO_smaller/FIFO_smaller.v
@@ -158,8 +157,15 @@ set_global_assignment -name CDF_FILE output_files/Chain5.cdf
 set_location_assignment PIN_E15 -to clk_div16_debug
 set_location_assignment PIN_E16 -to pll_output_debug_sig
 set_global_assignment -name QIP_FILE PLL_115k.qip
+<<<<<<< HEAD
 set_global_assignment -name CDF_FILE output_files/Chain1.cdf
 set_location_assignment PIN_G16 -to RxD
 set_location_assignment PIN_R16 -to rx_empty_debug
 set_global_assignment -name TIMEQUEST_MULTICORNER_ANALYSIS ON
+=======
+set_location_assignment PIN_G16 -to RxD
+set_location_assignment PIN_C16 -to trigMask_debug[0]
+set_location_assignment PIN_C15 -to trigMask_debug[1]
+set_location_assignment PIN_D16 -to trigMask_debug[2]
+>>>>>>> WPAM
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -4,11 +4,16 @@ module FIFO_to_UART_Controller(
 	FIFO_wrfull,
 	FIFO_rdempty,
 	UART_txempty,
+<<<<<<< HEAD
 	UART_rxempty,
 	
 	UART_rx_data,
 	
 	rxclk,
+=======
+	UART_rxdata,
+	UART_rxempty,
+>>>>>>> WPAM
 	
 	FIFO_rdreq,
 	UART_rst,
@@ -23,7 +28,13 @@ module FIFO_to_UART_Controller(
 	Bit_Padder_Sel,
 	
 	state_debug,
+<<<<<<< HEAD
 	UART_ld_tx_data
+=======
+	UART_rx_enable,
+	UART_uld_rx_data,
+	debug_pin,
+>>>>>>> WPAM
 );
 //Opis wejść/wyjść
 input wire rst;
@@ -31,9 +42,14 @@ input wire clk;			//Clock of the system
 input wire FIFO_wrfull;		//write-full flag from FIFO
 input wire FIFO_rdempty;		//read-empty flag.
 input wire UART_txempty;		//TxD-empty flag. Set when UART 8-bit data buffer is empty
+<<<<<<< HEAD
 input wire UART_rxempty;
 input wire  [7:0]UART_rx_data;
 input wire rxclk;
+=======
+input wire [7:0]UART_rxdata;
+input wire UART_rxempty;
+>>>>>>> WPAM
 
 output reg FIFO_rdreq;
 output reg UART_rst;
@@ -43,7 +59,11 @@ output reg UART_ld_tx_data;
 output reg UART_uld_rx_data;
 
 output reg triggerBlock_Syncrst;	//Triger Block has to be rst after each full read from FIFO
+<<<<<<< HEAD
 output reg [2:0]triggerBlock_Mask;		//Masks which inputs trigger the TriggerBlock
+=======
+output reg [2:0]triggerBlock_Mask = 3'b111;			//Masks which inputs trigger the TriggerBlock
+>>>>>>> WPAM
 
 output reg [1:0] Bit_Padder_Sel; //Used to select what type of data is pushed into UART
 											// 00 => Pipe (pads 3 bit sream with 5 zero bits)
@@ -52,6 +72,9 @@ output reg [1:0] Bit_Padder_Sel; //Used to select what type of data is pushed in
 											// 11 => Pipe  
 											
 output wire [4:0] state_debug;
+output reg UART_rx_enable = 1'b1;
+output reg UART_uld_rx_data;
+output wire debug_pin;
 
 //Lokalne stałe
 localparam [4:0] INITIAL				= 5'b00000;
@@ -162,6 +185,7 @@ always @ * begin
 endcase
 end
 
+<<<<<<< HEAD
 //always @( posedge rxclk ) begin
 //	if( UART_rxempty ) 
 //		begin
@@ -178,6 +202,17 @@ end
 //	triggerBlock_Mask = UART_rx_data[2:0];
 //end
 	
+=======
+//always @*
+//begin
+//	if(!UART_rxempty) begin
+//		UART_uld_rx_data <= 1'b1;
+//	end else begin
+//		UART_uld_rx_data <= 1'b0;
+//	end
+//	
+//end
+>>>>>>> WPAM
 
 
   

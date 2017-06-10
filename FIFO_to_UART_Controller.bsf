@@ -21,9 +21,15 @@ agreement for further details.
 */
 (header "symbol" (version "1.1"))
 (symbol
+<<<<<<< HEAD
 	(rect 16 16 296 224)
 	(text "FIFO_to_UART_Controller" (rect 5 0 118 12)(font "Arial" ))
 	(text "inst" (rect 8 192 20 204)(font "Arial" ))
+=======
+	(rect 16 16 296 256)
+	(text "FIFO_to_UART_Controller" (rect 5 0 118 12)(font "Arial" ))
+	(text "inst" (rect 8 224 20 236)(font "Arial" ))
+>>>>>>> WPAM
 	(port
 		(pt 0 32)
 		(input)
@@ -62,13 +68,20 @@ agreement for further details.
 	(port
 		(pt 0 112)
 		(input)
+<<<<<<< HEAD
 		(text "UART_rxempty" (rect 0 0 69 12)(font "Arial" ))
 		(text "UART_rxempty" (rect 21 107 90 119)(font "Arial" ))
 		(line (pt 0 112)(pt 16 112)(line_width 1))
+=======
+		(text "UART_rxdata[7..0]" (rect 0 0 80 12)(font "Arial" ))
+		(text "UART_rxdata[7..0]" (rect 21 107 101 119)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112)(line_width 3))
+>>>>>>> WPAM
 	)
 	(port
 		(pt 0 128)
 		(input)
+<<<<<<< HEAD
 		(text "UART_rx_data[7..0]" (rect 0 0 86 12)(font "Arial" ))
 		(text "UART_rx_data[7..0]" (rect 21 123 107 135)(font "Arial" ))
 		(line (pt 0 128)(pt 16 128)(line_width 3))
@@ -79,6 +92,11 @@ agreement for further details.
 		(text "rxclk" (rect 0 0 18 12)(font "Arial" ))
 		(text "rxclk" (rect 21 139 39 151)(font "Arial" ))
 		(line (pt 0 144)(pt 16 144)(line_width 1))
+=======
+		(text "UART_rxempty" (rect 0 0 69 12)(font "Arial" ))
+		(text "UART_rxempty" (rect 21 123 90 135)(font "Arial" ))
+		(line (pt 0 128)(pt 16 128)(line_width 1))
+>>>>>>> WPAM
 	)
 	(port
 		(pt 280 32)
@@ -97,8 +115,13 @@ agreement for further details.
 	(port
 		(pt 280 64)
 		(output)
+<<<<<<< HEAD
 		(text "UART_uld_rx_data" (rect 0 0 82 12)(font "Arial" ))
 		(text "UART_uld_rx_data" (rect 177 59 259 71)(font "Arial" ))
+=======
+		(text "UART_ld_tx_data" (rect 0 0 76 12)(font "Arial" ))
+		(text "UART_ld_tx_data" (rect 183 59 259 71)(font "Arial" ))
+>>>>>>> WPAM
 		(line (pt 280 64)(pt 264 64)(line_width 1))
 	)
 	(port
@@ -107,6 +130,7 @@ agreement for further details.
 		(text "UART_tx_enable" (rect 0 0 73 12)(font "Arial" ))
 		(text "UART_tx_enable" (rect 186 75 259 87)(font "Arial" ))
 		(line (pt 280 80)(pt 264 80)(line_width 1))
+<<<<<<< HEAD
 	)
 	(port
 		(pt 280 96)
@@ -142,15 +166,68 @@ agreement for further details.
 		(text "state_debug[4..0]" (rect 0 0 69 12)(font "Arial" ))
 		(text "state_debug[4..0]" (rect 190 155 259 167)(font "Arial" ))
 		(line (pt 280 160)(pt 264 160)(line_width 3))
+=======
+	)
+	(port
+		(pt 280 96)
+		(output)
+		(text "triggerBlock_Syncrst" (rect 0 0 83 12)(font "Arial" ))
+		(text "triggerBlock_Syncrst" (rect 176 91 259 103)(font "Arial" ))
+		(line (pt 280 96)(pt 264 96)(line_width 1))
+	)
+	(port
+		(pt 280 112)
+		(output)
+		(text "triggerBlock_Mask[2..0]" (rect 0 0 94 12)(font "Arial" ))
+		(text "triggerBlock_Mask[2..0]" (rect 165 107 259 119)(font "Arial" ))
+		(line (pt 280 112)(pt 264 112)(line_width 3))
+	)
+	(port
+		(pt 280 128)
+		(output)
+		(text "Bit_Padder_Sel[1..0]" (rect 0 0 80 12)(font "Arial" ))
+		(text "Bit_Padder_Sel[1..0]" (rect 179 123 259 135)(font "Arial" ))
+		(line (pt 280 128)(pt 264 128)(line_width 3))
+	)
+	(port
+		(pt 280 144)
+		(output)
+		(text "state_debug[4..0]" (rect 0 0 69 12)(font "Arial" ))
+		(text "state_debug[4..0]" (rect 190 139 259 151)(font "Arial" ))
+		(line (pt 280 144)(pt 264 144)(line_width 3))
+	)
+	(port
+		(pt 280 160)
+		(output)
+		(text "UART_rx_enable" (rect 0 0 74 12)(font "Arial" ))
+		(text "UART_rx_enable" (rect 185 155 259 167)(font "Arial" ))
+		(line (pt 280 160)(pt 264 160)(line_width 1))
+>>>>>>> WPAM
 	)
 	(port
 		(pt 280 176)
 		(output)
+<<<<<<< HEAD
 		(text "UART_ld_tx_data" (rect 0 0 76 12)(font "Arial" ))
 		(text "UART_ld_tx_data" (rect 183 171 259 183)(font "Arial" ))
 		(line (pt 280 176)(pt 264 176)(line_width 1))
 	)
 	(drawing
 		(rectangle (rect 16 16 264 192)(line_width 1))
+=======
+		(text "UART_uld_rx_data" (rect 0 0 82 12)(font "Arial" ))
+		(text "UART_uld_rx_data" (rect 177 171 259 183)(font "Arial" ))
+		(line (pt 280 176)(pt 264 176)(line_width 1))
+	)
+	(port
+		(pt 280 192)
+		(output)
+		(text "debug_pin" (rect 0 0 40 12)(font "Arial" ))
+		(text "debug_pin" (rect 219 187 259 199)(font "Arial" ))
+		(line (pt 280 192)(pt 264 192)(line_width 1))
+	)
+	(drawing
+		(rectangle (rect 16 16 264 224)(line_width 1))
+>>>>>>> WPAM
 	)
 )
